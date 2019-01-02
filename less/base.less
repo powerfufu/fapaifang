@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-size: 14px;
+}
+
+body {
+    font-family: @font-family;
+    color: @color;
+}
+
+a {
+    color: @color;
+    &:hover {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+ul, li, ol {
+    list-style: none;
+}
+
+dl, ol, ul {
+    margin-bottom: 0;
+}
+
+input, textarea, button, a, div {
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    vertical-align: top;
+}
+
+.iconfont {
+    font-size: initial;
+}
+
+/*字号*/
+.fz1_2 {
+    font-size: 1.2rem;
+}
+
+/*margin*/
+.mt {
+    margin-top: @spacing;
+}
+
+.mt_2 {
+    margin-top: @spacing * 2;
+}
+
+.mt_3 {
+    margin-top: @spacing * 3;
+}
+
+.mb_3 {
+    margin-bottom: @spacing * 3;
+}
+
+.mh_3 {
+    margin-top: @spacing * 3;
+    margin-bottom: @spacing * 3;
+}
+
+/*padding*/
