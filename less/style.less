@@ -1053,6 +1053,7 @@
             }
         }
         .button_group {
+            margin-bottom: 24px;
             .btn {
                 height: 44px;
                 border-radius: @border-radius;
@@ -1062,6 +1063,102 @@
                 padding-left: 20px;
                 padding-right: 20px;
                 margin-right: 10px;
+            }
+        }
+    }
+}
+
+.hourse_content {
+    .house_photo {
+        img {
+            width: 100%;
+            border-radius: @border-radius;
+            margin-bottom: 10px;
+        }
+    }
+    > [class^='col'] {
+        flex-basis: auto;
+    }
+    .left {
+        width: 60%;
+        .house_estate_intro {
+            img {
+                border-radius: @border-radius;
+                width: 100%;
+            }
+            .title {
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+            ul {
+                line-height: 2.2;
+                color: rgba(0, 0, 0, .8);
+            }
+        }
+    }
+    .right {
+        width: 40%;
+        position: relative;
+
+        .broker_group {
+            visibility: hidden;
+            &.sticky {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/*经纪人*/
+.broker_group {
+    position: sticky;
+    .broker {
+        display: flex;
+        padding: 15px 0;
+        border-top: @border-color solid 1px;
+        border-bottom: @border-color solid 1px;
+        align-items: center;
+        + .broker {
+            border-top: 0;
+        }
+        .picture {
+            width: 81px;
+            height: 108px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: @border-radius;
+            }
+        }
+        .content {
+            padding: 0 15px;
+            flex: 1;
+            align-self: flex-start;
+            .name {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 5px;
+                .tag {
+                    font-weight: 400;
+                    font-size: 14px;
+                    margin-left: 5px;
+                }
+            }
+            .duty {
+                margin-bottom: 15px;
+            }
+            .mobile {
+                font-size: 24px;
+                color: @color-primary;
+            }
+        }
+        .qrcode {
+            width: 98px;
+            height: 98px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: @border-radius;
             }
         }
     }

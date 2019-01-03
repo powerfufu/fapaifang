@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
-    <title>胜宝投资</title>
+    <title>法拍房</title>
+    <script src="lib/hc-sticky.js"></script>
 </head>
 <body>
 
@@ -72,16 +73,17 @@
     </div>
 </div>
 
-<!--面包屑导航-->
-<div class="container bread_crumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">首页</a></li>
-        <li class="breadcrumb-item"><a href="##">房源列表</a></li>
-        <li class="breadcrumb-item active">北京市西城区黄寺大街26号院2号楼16层北单元1602</li>
-    </ol>
-</div>
-
 <div class="container">
+    <!--面包屑导航-->
+    <div class="bread_crumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首页</a></li>
+            <li class="breadcrumb-item"><a href="##">房源列表</a></li>
+            <li class="breadcrumb-item active">北京市西城区黄寺大街26号院2号楼16层北单元1602</li>
+        </ol>
+    </div>
+
+    <!--房源概述-->
     <div class="row overview">
         <div class="col gallery">
             <div class="preview">
@@ -158,18 +160,92 @@
                 <button type="button" class="btn btn-primary">预约看房</button>
                 <button type="button" class="btn btn-default">房产调查报告</button>
             </div>
+            <div class="broker_group">
+                <div class="broker">
+                    <div class="picture">
+                        <img src="./images/img_5.png">
+                    </div>
+                    <div class="content">
+                        <div class="name">李女士<span class="tag">法拍专员</span></div>
+                        <div class="duty">从业年限6年</div>
+                        <div class="mobile">010-86460676</div>
+                    </div>
+                    <div class="qrcode">
+                        <img src="./images/qrcode.jpg">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="module">
-    <div class="module_title">
-        <div class="container">
+    <div class="row hourse_content">
+        <div class="col-xl left">
+            <!--房源照片-->
+            <div class="module">
+                <div class="module_title">
+                    房源照片
+                </div>
+                <div class="module_body">
+                    <div class="house_photo">
+                        <img src="./images/img_1.png">
+                        <img src="./images/img_2.png">
+                        <img src="./images/img_3.png">
+                    </div>
+                </div>
+            </div>
+
+            <!--小区介绍-->
+            <div class="module">
+                <div class="module_title">
+                    小区介绍
+                </div>
+                <div class="module_body">
+                    <div class="row house_estate_intro">
+                        <div class="col-xl-5">
+                            <img src="./images/img_1.png">
+                        </div>
+                        <div class="col-xl-7">
+                            <div class="title">田家园</div>
+                            <ul>
+                                <li>建筑年代：2004年建成</li>
+                                <li>建筑类型： 板楼</li>
+                                <li>物业费用：5.60元/平米/月</li>
+                                <li>物业公司：北京汇俊物业有限公司</li>
+                                <li>开发商：北京世纪朝阳房地产开发有限公司</li>
+                                <li>楼栋总数： 11栋</li>
+                                <li>总户数： 1332户</li>
+                                <li>详细地址：朝阳朝阳公园南路8号院</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl right" id="stickyContainer">
+            <div class="broker_group" id="sticky">
+                <div class="broker">
+                    <div class="picture">
+                        <img src="./images/img_5.png">
+                    </div>
+                    <div class="content">
+                        <div class="name">李女士<span class="tag">法拍专员</span></div>
+                        <div class="duty">从业年限6年</div>
+                        <div class="mobile">010-86460676</div>
+                    </div>
+                    <div class="qrcode">
+                        <img src="./images/qrcode.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--房源推荐-->
+    <div class="module">
+        <div class="module_title">
             房源推荐
         </div>
-    </div>
-    <div class="module_body">
-        <div class="container">
+        <div class="module_body">
             <div class="row house_group">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="house begin">
@@ -268,6 +344,7 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+<script src="./lib/hc-sticky.js"></script>
 <script>
     (function() {
         $('[data-name="searchType"] li').on('click', function() {
@@ -295,6 +372,13 @@
                 swiper: galleryThumbs,
             },
         })
+
+        /*$('#sticky').hcSticky({
+            stickTo: '#stickyContainer',
+        })*/
+        var Sticky = new hcSticky('#sticky', {
+            stickTo: '#stickyContainer'
+        });
     })()
 </script>
 
