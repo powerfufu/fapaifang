@@ -957,9 +957,11 @@
 }
 
 .house_content {
+    display: flex;
+    flex-wrap: wrap;
     .left {
         width: 60%;
-        float: left;
+        order: 1;
         .house_photo {
             img {
                 width: 100%;
@@ -982,7 +984,7 @@
     }
     .right {
         width: 40%;
-        float: right;
+        order: 2;
         padding-left: 24px;
     }
 }
@@ -1195,7 +1197,7 @@
             .btn_group {
                 align-self: center;
                 padding-left: 15px;
-                .btn{
+                .btn {
                     background: @color-bg;
                 }
             }
