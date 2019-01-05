@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87e8f5f-5477-4fc1-b6ff-fddbc36a798e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/less/media.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/attention.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/recently.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/recommend.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/record.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/remind.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/subscribe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hourse.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hourse_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/base.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/base.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/bootstrap.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/bootstrap.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/media.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/media.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/profile.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -138,60 +110,34 @@
         <counts>
           <entry key="css" value="16" />
           <entry key="html" value="4261" />
-          <entry key="less" value="8529" />
+          <entry key="less" value="8570" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="16" />
           <entry key="HTML" value="4261" />
-          <entry key="Less" value="8529" />
+          <entry key="Less" value="8570" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
           <entry key="html" value="82" />
-          <entry key="less" value="31" />
+          <entry key="less" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="82" />
-          <entry key="Less" value="31" />
+          <entry key="Less" value="33" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/record.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="e#2464#2470#1" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/remind.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="e#2464#2470#1" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/subscribe.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -285,7 +231,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
@@ -293,6 +239,27 @@
               <folding>
                 <element signature="e#2396#2402#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="365" column="32" lean-forward="true" selection-start-line="365" selection-start-column="32" selection-end-line="365" selection-end-column="32" />
+              <folding>
+                <element signature="e#104#142#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/less/media.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="187" column="26" lean-forward="true" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -310,8 +277,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#f8f8f8</find>
-      <find>bread_crumb</find>
       <find>pagination</find>
       <find>.filter_box</find>
       <find>overview</find>
@@ -340,6 +305,8 @@
       <find>新浪微博</find>
       <find>&lt;ul class=&quot;navbar-nav ml-auto&quot;&gt;                 &lt;li class=&quot;nav-item active&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/&quot;&gt;首页&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;价格&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;户型&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;住宅&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;商业&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;别墅&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;国有资产&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/about.html&quot;&gt;关于我们&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/user/profile.html&quot;&gt;&lt;i class=&quot;iconfont icon-user&quot;&gt;&amp;nbsp;&lt;/i&gt;个人中心&lt;/a&gt;                 &lt;/li&gt;             &lt;/ul&gt;             &lt;ul class=&quot;navbar-nav user&quot;&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a href=&quot;/login.html&quot; class=&quot;nav-link&quot;&gt;登录&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a href=&quot;/register.html&quot; class=&quot;nav-link&quot;&gt;注册&lt;/a&gt;                 &lt;/li&gt;             &lt;/ul&gt;</find>
       <find>&lt;ul class=&quot;navbar-nav ml-auto&quot;&gt;                 &lt;li class=&quot;nav-item active&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;首页&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;司法拍卖&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;国有资产&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;金融贷款&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;服务专员&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;iconfont icon-user&quot;&gt;&amp;nbsp;&lt;/i&gt;个人中心&lt;/a&gt;                 &lt;/li&gt;             &lt;/ul&gt;             &lt;ul class=&quot;navbar-nav user&quot;&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a href=&quot;#登录#&quot; class=&quot;nav-link&quot;&gt;登录&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a href=&quot;#注册#&quot; class=&quot;nav-link&quot;&gt;注册&lt;/a&gt;                 &lt;/li&gt;             &lt;/ul&gt;</find>
+      <find>news_group</find>
+      <find>.news_group</find>
     </findStrings>
     <replaceStrings>
       <replace>$</replace>
@@ -353,9 +320,9 @@
       <replace>开拍时间</replace>
       <replace>2018-09-03</replace>
       <replace>删除记录</replace>
-      <replace>删除</replace>
       <replace>&lt;a href=&quot;##&quot;&gt;&lt;i class=&quot;iconfont icon-weibo&quot;&gt;&amp;nbsp;&lt;/i&gt;新浪微博&lt;/a&gt;</replace>
       <replace>&lt;ul class=&quot;navbar-nav ml-auto&quot;&gt;                 &lt;li class=&quot;nav-item active&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/&quot;&gt;首页&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;价格&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;户型&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;住宅&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;商业&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;别墅&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/house.html&quot;&gt;国有资产&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/about.html&quot;&gt;关于我们&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a class=&quot;nav-link&quot; href=&quot;/user/profile.html&quot;&gt;&lt;i class=&quot;iconfont icon-user&quot;&gt;&amp;nbsp;&lt;/i&gt;个人中心&lt;/a&gt;                 &lt;/li&gt;             &lt;/ul&gt;             &lt;ul class=&quot;navbar-nav user&quot;&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a href=&quot;/login.html&quot; class=&quot;nav-link&quot;&gt;登录&lt;/a&gt;                 &lt;/li&gt;                 &lt;li class=&quot;nav-item&quot;&gt;                     &lt;a href=&quot;/register.html&quot; class=&quot;nav-link&quot;&gt;注册&lt;/a&gt;                 &lt;/li&gt;             &lt;/ul&gt;</replace>
+      <replace>删除</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\workspace\轩宇网络\shengbaotouzi\html\scss</dir>
@@ -383,8 +350,6 @@
         <option value="$PROJECT_DIR$/less/base.less" />
         <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/less/bootstrap.less" />
-        <option value="$PROJECT_DIR$/less/style.less" />
-        <option value="$PROJECT_DIR$/less/media.less" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/user/attention.html" />
@@ -400,6 +365,8 @@
         <option value="$PROJECT_DIR$/house_detail.html" />
         <option value="$PROJECT_DIR$/news.html" />
         <option value="$PROJECT_DIR$/news_detail.html" />
+        <option value="$PROJECT_DIR$/less/style.less" />
+        <option value="$PROJECT_DIR$/less/media.less" />
       </list>
     </option>
   </component>
@@ -505,12 +472,12 @@
       <workItem from="1546002779718" duration="7380000" />
       <workItem from="1546090008937" duration="36813000" />
       <workItem from="1546433185021" duration="4736000" />
-      <workItem from="1546525182243" duration="44080000" />
+      <workItem from="1546525182243" duration="44458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114998000" />
+    <option name="totallyTimeSpent" value="115376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -646,23 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="1199" column="41" selection-start-line="1199" selection-start-column="41" selection-end-line="1199" selection-end-column="41" />
-          <folding>
-            <element signature="e#104#142#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/media.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="87" column="10" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -836,6 +786,23 @@
           <folding>
             <element signature="e#2396#2402#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="365" column="32" lean-forward="true" selection-start-line="365" selection-start-column="32" selection-end-line="365" selection-end-column="32" />
+          <folding>
+            <element signature="e#104#142#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/media.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="187" column="26" lean-forward="true" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
         </state>
       </provider>
     </entry>
