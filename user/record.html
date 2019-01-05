@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/index.css">
     <title>法拍房</title>
@@ -78,7 +79,7 @@
                     <li>
                         <a href="/user/remind.html">拍卖提醒</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/user/record.html">找房记录</a>
                     </li>
                     <li>
@@ -96,32 +97,71 @@
                     <li>
                         <a href="profile.html">个人信息</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="change_password.html">修改密码</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="col-xl-10 col-lg-10 col-md-3 col-sm-12 col-12">
+        <div class="col-xl-10 col-lg-10 col-md-9 col-sm-12 col-12">
             <div class="user_section">
                 <div class="card">
-                    <div class="user_section_title border-bottom">修改密码</div>
+                    <div class="user_section_title border-bottom">找房记录</div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-4">
-                                <div class="form-group">
-                                    <label>旧密码</label>
-                                    <input type="password" class="form-control">
+                        <div class="house_group remind_group">
+                            <div class="house begin">
+                                <a href="##" class="thumb">
+                                    <img src="./../images/img_1.png" class="cover">
+                                </a>
+                                <div class="content">
+                                    <div class="section">
+                                        <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                                        <ul class="attr">
+                                            <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                                            <li>开拍时间：2018-09-03 10:00</li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn_group">
+                                        <button type="button" class="btn">删除记录</button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>新密码</label>
-                                    <input type="password" class="form-control">
+                                <div class="state">即将开始</div>
+                            </div>
+                            <div class="house underway">
+                                <a href="##" class="thumb">
+                                    <img src="./../images/img_1.png" class="cover">
+                                </a>
+                                <div class="content">
+                                    <div class="section">
+                                        <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                                        <ul class="attr">
+                                            <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                                            <li>开拍时间：2018-09-03 10:00</li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn_group">
+                                        <button type="button" class="btn">删除记录</button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>确认新密码</label>
-                                    <input type="password" class="form-control">
+                                <div class="state">正在进行</div>
+                            </div>
+                            <div class="house">
+                                <a href="##" class="thumb">
+                                    <img src="./../images/img_1.png" class="cover">
+                                </a>
+                                <div class="content">
+                                    <div class="section">
+                                        <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                                        <ul class="attr">
+                                            <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                                            <li>开拍时间：2018-09-03 10:00</li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn_group">
+                                        <button type="button" class="btn">删除记录</button>
+                                    </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">保存</button>
+                                <div class="state">已结束</div>
                             </div>
                         </div>
                     </div>
@@ -130,7 +170,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="footer">
     <div class="footer_top">
@@ -179,6 +218,7 @@
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
     (function() {
         $('#searchType li').on('click', function() {

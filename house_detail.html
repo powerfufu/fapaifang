@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
@@ -13,9 +13,9 @@
 
 <!--导航条-->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-primary">
-    <div class="container">
-        <a class="navbar-brand" href="##">
-            <img src="./images/logo.png" alt="" class="logo">
+    <div class="container navbar_container">
+        <a class="navbar-brand" href="/">
+            <i class="iconfont icon-logo-h logo"></i>
         </a>
         <div class="local dropdown">
             <div data-toggle="dropdown"><i class="iconfont icon-dingwei">&nbsp;</i>北京</div>
@@ -32,30 +32,39 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">首页</a>
+                    <a class="nav-link" href="/">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">司法拍卖</a>
+                    <a class="nav-link" href="/house.html">价格</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">国有资产</a>
+                    <a class="nav-link" href="/house.html">户型</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">金融贷款</a>
+                    <a class="nav-link" href="/house.html">住宅</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">服务专员</a>
+                    <a class="nav-link" href="/house.html">商业</a>
                 </li>
-                <li class="nav-item login">
-                    <a href="##" class="nav-link">登录</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/house.html">别墅</a>
                 </li>
-                <li class="nav-item register">
-                    <a href="##" class="nav-link">注册</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/house.html">国有资产</a>
                 </li>
-                <li class="nav-item user">
-                    <div class="action_btn">
-                        <a href="##">登录</a>/<a href="##">注册</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/profile.html"><i class="iconfont icon-user">&nbsp;</i>个人中心</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav user">
+                <li class="nav-item">
+                    <a href="/login.html" class="nav-link">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/register.html" class="nav-link">注册</a>
                 </li>
             </ul>
         </div>
@@ -63,19 +72,19 @@
 </nav>
 
 <!--标题-->
-<div class="detail_title_pc">
+<div class="house_detail_title">
     <div class="container">
         <div class="title">北京市西城区黄寺大街26号院2号楼16层北单元1602</div>
-        <div class="button_group">
-            <button type="button" class="btn btn-default mr-2">关注房源</button>
-            <button type="button" class="btn btn-primary">设为提醒</button>
+        <div class="btn_group">
+            <button type="button" class="btn btn-default attention_btn">关注房源</button>
+            <button type="button" class="btn btn-primary remind_btn">设为提醒</button>
         </div>
     </div>
 </div>
 
 <div class="container">
     <!--面包屑导航-->
-    <div class="bread_crumb">
+    <div class="breadcrumb_wrapper breadcrumb_wrapper_detail">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">首页</a></li>
             <li class="breadcrumb-item"><a href="##">房源列表</a></li>
@@ -84,8 +93,8 @@
     </div>
 
     <!--房源概述-->
-    <div class="row overview">
-        <div class="col gallery">
+    <div class="overview">
+        <div class="gallery">
             <div class="preview">
                 <div class="swiper-container gallery-top">
                     <div class="swiper-wrapper">
@@ -120,7 +129,8 @@
                 </div>
             </div>
         </div>
-        <div class="col content">
+        <div class="content">
+            <div class="title">北京市西城区黄寺大街26号院2号楼16层北单元1602</div>
             <div class="price">
                 <span class="starting">
                     起拍价：
@@ -142,7 +152,7 @@
                     <div class="bottom">平层/精装</div>
                 </div>
                 <div class="item">
-                    <div class="top">100.23平米</div>
+                    <div class="top">100.23平</div>
                     <div class="bottom">1998年建/塔楼</div>
                 </div>
             </div>
@@ -159,69 +169,14 @@
             <div class="button_group">
                 <button type="button" class="btn btn-primary">预约看房</button>
                 <button type="button" class="btn btn-default">房产调查报告</button>
-            </div>
-            <div class="broker_group">
-                <div class="broker">
-                    <div class="picture">
-                        <img src="./images/img_5.png">
-                    </div>
-                    <div class="content">
-                        <div class="name">李女士<span class="tag">法拍专员</span></div>
-                        <div class="duty">从业年限6年</div>
-                        <div class="mobile">010-86460676</div>
-                    </div>
-                    <div class="qrcode">
-                        <img src="./images/qrcode.jpg">
-                    </div>
-                </div>
+                <button type="button" class="btn btn-default attention_btn">关注房源</button>
+                <button type="button" class="btn btn-default remind_btn">设为提醒</button>
             </div>
         </div>
     </div>
 
-    <div class="row hourse_content">
-        <div class="col-xl left">
-            <!--房源照片-->
-            <div class="module">
-                <div class="module_title">
-                    房源照片
-                </div>
-                <div class="module_body">
-                    <div class="house_photo">
-                        <img src="./images/img_1.png">
-                        <img src="./images/img_2.png">
-                        <img src="./images/img_3.png">
-                    </div>
-                </div>
-            </div>
-
-            <!--小区介绍-->
-            <div class="module">
-                <div class="module_title">
-                    小区介绍
-                </div>
-                <div class="module_body">
-                    <div class="row house_estate_intro">
-                        <div class="col-xl-5">
-                            <img src="./images/img_1.png">
-                        </div>
-                        <div class="col-xl-7">
-                            <div class="title">田家园</div>
-                            <ul>
-                                <li>建筑年代：2004年建成</li>
-                                <li>建筑类型： 板楼</li>
-                                <li>物业费用：5.60元/平米/月</li>
-                                <li>物业公司：北京汇俊物业有限公司</li>
-                                <li>开发商：北京世纪朝阳房地产开发有限公司</li>
-                                <li>楼栋总数： 11栋</li>
-                                <li>总户数： 1332户</li>
-                                <li>详细地址：朝阳朝阳公园南路8号院</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl right" id="stickyContainer">
+    <div class="house_content clearfix" id="stickyContainer">
+        <div class="right">
             <div class="broker_group" id="sticky">
                 <div class="broker">
                     <div class="picture">
@@ -238,63 +193,89 @@
                 </div>
             </div>
         </div>
+        <div class="left">
+            <!--房源照片-->
+            <div class="headline">房源照片</div>
+            <div class="house_photo">
+                <img src="./images/img_1.png">
+                <img src="./images/img_2.png">
+                <img src="./images/img_3.png">
+            </div>
+
+            <!--小区介绍-->
+            <div class="headline">小区介绍</div>
+            <div class="row house_estate_intro">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                    <img src="./images/img_1.png">
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                    <div class="title">田家园</div>
+                    <ul>
+                        <li>建筑年代：2004年建成</li>
+                        <li>建筑类型： 板楼</li>
+                        <li>物业费用：5.60元/平米/月</li>
+                        <li>物业公司：北京汇俊物业有限公司</li>
+                        <li>开发商：北京世纪朝阳房地产开发有限公司</li>
+                        <li>楼栋总数： 11栋</li>
+                        <li>总户数： 1332户</li>
+                        <li>详细地址：朝阳朝阳公园南路8号院</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--房源推荐-->
-    <div class="module">
-        <div class="module_title">
-            房源推荐
+    <div class="headline">
+        房源推荐
+    </div>
+    <div class="row house_group">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house begin">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
+                </div>
+                <div class="state">即将开始</div>
+            </div>
         </div>
-        <div class="module_body">
-            <div class="row house_group">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house begin">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">即将开始</div>
-                    </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house begin">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house begin">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">即将开始</div>
-                    </div>
+                <div class="state">即将开始</div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house begin">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house begin">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">即将开始</div>
-                    </div>
-                </div>
+                <div class="state">即将开始</div>
             </div>
         </div>
     </div>
@@ -311,20 +292,26 @@
                     <div class="tit">联系地址</div>
                     <div class="address">北京市东城区建国门内大街7号光华长安大厦2座1817</div>
                 </div>
-                <div class="col-xl search mt_3">
-                    <ul class="search_type clearfix" data-name="searchType">
-                        <li class="active">全部</li>
-                        <li>住宅</li>
-                        <li>商业</li>
-                        <li>别墅</li>
-                        <li>国有资产</li>
-                    </ul>
-                    <div class="search_bar">
-                        <input type="text" class="search_bar_input" placeholder="输入关键词">
-                        <button type="button" class="search_bar_button">
-                            <i class="iconfont icon-sousuo"></i>
-                            开始搜索
-                        </button>
+                <div class="col-xl mt_3">
+                    <div class="search">
+                        <ul class="search_type clearfix" data-name="searchType">
+                            <li class="active">全部</li>
+                            <li>住宅</li>
+                            <li>商业</li>
+                            <li>别墅</li>
+                            <li>国有资产</li>
+                        </ul>
+                        <div class="search_bar">
+                            <input type="text" class="search_bar_input" placeholder="输入关键词">
+                            <button type="button" class="search_bar_button">
+                                <i class="iconfont icon-sousuo"></i>
+                                开始搜索
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sns">
+                        <a href="##"><i class="iconfont icon-weibo">&nbsp;</i>新浪微博</a>
+                        <a href="##"><i class="iconfont icon-lianjie">&nbsp;</i>今日头条</a>
                     </div>
                 </div>
                 <div class="col-xl-3 qrcode mt_3">
@@ -373,12 +360,11 @@
             },
         })
 
-        /*$('#sticky').hcSticky({
-            stickTo: '#stickyContainer',
-        })*/
-        var Sticky = new hcSticky('#sticky', {
-            stickTo: '#stickyContainer'
-        });
+        if (window.innerWidth > 991) {
+            var Sticky = new hcSticky('#sticky', {
+                stickTo: '#stickyContainer',
+            })
+        }
     })()
 </script>
 

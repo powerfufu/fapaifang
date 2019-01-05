@@ -1,116 +1,90 @@
 @import "variables";
+
 /*导航*/
 .navbar {
     position: relative;
     z-index: 1000;
-    > .container {
+    .navbar_container {
         justify-content: left;
     }
-    .navbar-nav {
-        .nav-link {
-            font-size: 15px;
-        }
-    }
     .logo {
-        height: 40px;
+        line-height: 1;
+        font-size: 38px;
     }
     .user {
-        margin-left: 24px;
-        display: none;
-        .action_btn {
-            width: 122px;
-            text-align: center;
-            height: 32px;
-            border: #ffffff solid 2px;
-            border-radius: 32px;
-            line-height: 28px;
-            color: #ffffff;
-            a {
-                color: #ffffff;
+        border: #fff solid 2px;
+        border-radius: 30px;
+        margin-left: 15px;
+        &:hover {
+            background: #fff;
+            .nav-link {
+                color: #000;
             }
-            &:hover {
-                color: @color;
-                background: #ffffff;
-                a {
-                    color: @color;
+        }
+        .nav-link {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .nav-item {
+            &:first-child {
+                .nav-link {
+                    padding-right: 0;
+                    &::after {
+                        content: '/';
+                    }
+                }
+            }
+            &:last-child {
+                .nav-link {
+                    padding-left: 0;
                 }
             }
         }
     }
-    .login, .register {
-        display: none;
-    }
     .local {
-        height: 25px;
-        line-height: 25px;
         background: rgba(0, 0, 0, .5);
-        border-radius: 25px;
-        color: #ffffff;
-        padding: 0 10px;
+        color: #fff;
+        padding: 7px 10px;
         font-size: 12px;
+        line-height: 1;
+        border-radius: 30px;
         cursor: pointer;
-        i.iconfont {
+        .iconfont {
             font-size: 12px;
         }
         .dropdown-menu {
             a {
                 display: block;
-                padding: 5px 15px;
+                padding: 10px 15px;
                 &:hover {
-                    background: #eeeeee;
+                    background: #eee;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 991px) {
-    .navbar {
-        background: @color-primary;
-        .login, .register {
-            display: block;
-        }
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .navbar {
-        .user {
-            display: block;
-        }
-    }
-}
-
-.banner_swiper {
+.banner_wrapper {
     height: 600px;
     position: relative;
-    margin-top: -65px;
+    margin-top: -64px;
     .swiper-slide {
         background-position: center;
         background-size: cover;
+    }
+    .swiper-pagination-bullet {
+        background: #fff;
+        opacity: .8
     }
     .swiper-pagination-bullet-active {
         background: @color-primary;
     }
 }
 
-@media screen and (max-width: 991px) {
-    .banner_swiper {
-        margin-top: 0;
-        height: 300px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .banner_swiper {
-        height: 200px;
-    }
-}
-
 /*搜索条*/
 .search_wrapper {
     position: absolute;
-    z-index: 1000;
+    z-index: 100;
     width: 800px;
     left: 0;
     right: 0;
@@ -119,7 +93,7 @@
     .search_type {
         display: flex;
         font-size: 18px;
-        color: #ffffff;
+        color: #fff;
         margin-bottom: 10px;
         padding-left: 20px;
         li {
@@ -134,27 +108,27 @@
                     width: 100%;
                     left: 0;
                     bottom: 0;
-                    border-bottom: 3px solid #ffffff;
+                    border-bottom: 3px solid #fff;
                 }
             }
         }
     }
-    .search_bar {
+    .search_form {
         display: flex;
         height: 55px;
-        background: #ffffff;
+        background: #fff;
         border-radius: 55px;
-        input {
+        .search_input {
             flex: 1;
             border: 0;
             border-radius: 55px 0 0 55px;
             padding: 0 20px;
             font-size: 16px;
         }
-        button {
+        .search_button {
             padding: 0 30px;
             font-size: 18px;
-            color: #ffffff;
+            color: #fff;
             background: @color-primary;
             height: 100%;
             line-height: 55px;
@@ -164,48 +138,16 @@
     }
 }
 
-@media screen and (max-width: 991px) {
-    .search_wrapper {
-        position: initial;
-        width: 100%;
-        background: #f8f8f8;
-        padding: 15px;
-        .search_type {
-            display: none;
-        }
-        .search_bar {
-            background: transparent;
-            height: 40px;
-            input {
-                border-radius: @border-radius 0 0 @border-radius;
-                padding: 0 15px;
-                border: #eeeeee solid 1px;
-                border-right: 0;
-            }
-            button {
-                border-radius: 0 @border-radius @border-radius 0;
-                line-height: 40px;
-                font-size: 14px;
-                padding: 0 15px;
-                i.iconfont {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-}
-
-.analysis {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: none;
+/*数据*/
+.analysis_wrapper {
+    margin: 40px 0 20px;
     .item {
         width: 90%;
         margin: 0 auto;
         height: 140px;
         background: #4ca0ff;
         background-image: linear-gradient(lighten(#4ca0ff, 5), #4ca0ff);
-        color: #ffffff;
+        color: #fff;
         border-radius: @border-radius-bg;
         box-shadow: 0 4px 20px rgba(76, 160, 255, .2);
         display: flex;
@@ -228,6 +170,7 @@
             }
         }
         .content {
+            flex: 1;
             .number {
                 font-size: 38px;
             }
@@ -238,21 +181,13 @@
     }
 }
 
-@media screen and(min-width: 992px) {
-    .analysis {
-        display: block;
-    }
-}
-
-.module {
-    .module_title {
-        font-size: 24px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        .en {
-            font-weight: 300;
-            text-transform: uppercase;
-        }
+/*标题*/
+.headline {
+    font-size: 24px;
+    padding: 20px 0;
+    .en {
+        font-weight: 300;
+        text-transform: uppercase;
     }
 }
 
@@ -291,11 +226,11 @@
                 font-size: 18px;
                 line-height: 24px;
                 margin-bottom: 5px;
-                color: #000000;
+                color: #000;
             }
             .attr {
                 line-height: 32px;
-                color: #666666;
+                color: #666;
                 .price {
                     big {
                         font-size: 26px;
@@ -308,13 +243,13 @@
             height: 30px;
             border-radius: 30px;
             line-height: 30px;
-            background: #aaaaaa;
-            background-image: linear-gradient(lighten(#aaaaaa, 5), #aaaaaa);
+            background: #aaa;
+            background-image: linear-gradient(lighten(#aaa, 5), #aaa);
             position: absolute;
             text-align: center;
             right: 0;
             bottom: 0;
-            color: #ffffff;
+            color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
         }
         &.begin {
@@ -346,49 +281,6 @@
             }
         }
     }
-    @media screen and (max-width: 768px) {
-        .house {
-            display: flex;
-            .thumb {
-                width: 40%;
-                .state_tag {
-                    display: none;
-                }
-            }
-            .content {
-                flex: 1;
-                margin-left: 16px;
-                .name {
-                    font-size: 16px;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
-                }
-                .attr {
-                    line-height: 1.8;
-                    font-size: 12px;
-                    .price {
-                        big {
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-            .state {
-                left: 0;
-                top: 5px;
-                right: auto;
-                bottom: auto;
-                font-size: 12px;
-                border-radius: 0 24px 24px 0;
-                width: 70px;
-                height: 24px;
-                line-height: 24px;
-            }
-        }
-    }
 }
 
 /*热门房源*/
@@ -408,7 +300,7 @@
             bottom: 0;
             width: 100%;
             padding: 10px 15px;
-            color: #ffffff;
+            color: #fff;
             z-index: 1;
             line-height: 1;
             .mask {
@@ -454,7 +346,7 @@
             width: 100%;
             padding: 10px 15px;
             font-size: 24px;
-            color: #ffffff;
+            color: #fff;
             background-image: linear-gradient(transparent, rgba(0, 0, 0, .5));
             text-overflow: ellipsis;
             overflow: hidden;
@@ -471,10 +363,8 @@
                 margin-top: 14px;
             }
             .thumb {
-                display: block;
                 img {
                     width: 100%;
-                    border-radius: @border-radius;
                 }
             }
             .content {
@@ -482,7 +372,7 @@
                 padding-left: @spacing * 2;
                 .title {
                     font-size: 18px;
-                    color: #000000;
+                    color: #000;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
@@ -506,51 +396,12 @@
                 }
             }
         }
-        @media screen and (max-width: 1200px) {
-            .news {
-                .thumb {
-                    width: 155px;
-                }
-                .content {
-                    .desc {
-                        -webkit-line-clamp: 1;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: 991px) {
-            .news {
-                margin-bottom: 0;
-                margin-top: 16px;
-                .thumb {
-                    width: 40%;
-                }
-                .content {
-                    flex: 1;
-                    .title {
-                        font-size: 16px;
-                    }
-                    .desc {
-                        -webkit-line-clamp: 2;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: 768px) {
-            .news {
-                .content {
-                    .desc {
-                        -webkit-line-clamp: 1;
-                    }
-                }
-            }
-        }
     }
 }
 
 /*竞拍流程*/
 .flow_group {
-    .col {
+    .flow_col {
         margin-bottom: 20px;
         .flow {
             text-align: center;
@@ -567,15 +418,6 @@
     }
 }
 
-@media screen and (max-width: 991px) {
-    .flow_group {
-        .col {
-            width: 100% / 3;
-            flex-basis: auto;
-        }
-    }
-}
-
 /*合作伙伴*/
 .partner_group {
     flex-wrap: wrap !important;
@@ -586,18 +428,7 @@
         flex-grow: 0;
         img {
             width: 100%;
-            border: #eeeeee solid 1px;
-            border-radius: @border-radius;
-        }
-    }
-    @media screen and (max-width: 991px) {
-        .partner {
-            width: 100% / 3;
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .partner {
-            width: 50%;
+            border: #eee solid 1px;
         }
     }
 }
@@ -611,7 +442,7 @@
         .container {
             .contact {
                 line-height: 1;
-                color: #ffffff;
+                color: #fff;
                 .mobile_number {
                     font-size: 30px;
                     color: @color-primary;
@@ -627,7 +458,7 @@
                     li {
                         float: left;
                         margin-right: 30px;
-                        color: #ffffff;
+                        color: #fff;
                         height: 35px;
                         cursor: pointer;
                         &.active {
@@ -643,7 +474,7 @@
                                 display: block;
                                 border-style: solid;
                                 border-width: 6px;
-                                border-color: transparent transparent #ffffff transparent;
+                                border-color: transparent transparent #fff transparent;
                             }
                         }
                     }
@@ -653,7 +484,7 @@
                     .search_bar_input {
                         flex: 1;
                         height: 46px;
-                        background: #ffffff;
+                        background: #fff;
                         border: none;
                         border-radius: @border-radius 0 0 @border-radius;
                         outline: none;
@@ -661,7 +492,7 @@
                     }
                     .search_bar_button {
                         border-radius: 0 @border-radius @border-radius 0;
-                        color: #ffffff;
+                        color: #fff;
                         font-size: 15px;
                         text-align: center;
                         border: 0;
@@ -670,6 +501,19 @@
                         cursor: pointer;
                         background: @color-primary;
                     }
+                }
+            }
+            .sns {
+                margin-top: 10px;
+                a {
+                    display: inline-block;
+                    margin-right: 5px;
+                    background: @color-primary;
+                    background-image: linear-gradient(lighten(@color-primary, 5), @color-primary);
+                    color: #fff;
+                    line-height: 1;
+                    padding: 10px 15px;
+                    border-radius: @border-radius-sm;
                 }
             }
             .qrcode {
@@ -685,7 +529,7 @@
     .footer_bottom {
         background: @color-primary;
         text-align: center;
-        color: #ffffff;
+        color: #fff;
         font-size: 13px;
         padding: 15px 0;
         line-height: 1.6;
@@ -698,22 +542,14 @@
 }
 
 .user_sidebar {
-    background: #ffffff;
+    background: #fff;
     border-radius: @border-radius;
+    overflow: hidden;
+    margin-top: 24px;
     .menu {
         line-height: 52px;
         li {
             position: relative;
-            &:first-child {
-                a {
-                    border-radius: @border-radius @border-radius 0 0;
-                }
-            }
-            &:last-child {
-                a {
-                    border-radius: 0 0 @border-radius @border-radius;
-                }
-            }
             a {
                 display: block;
                 padding: 0 0 0 24px;
@@ -721,7 +557,7 @@
             &:not(.active):hover {
                 a {
                     background: @color-primary;
-                    color: #ffffff;
+                    color: #fff;
                 }
             }
             &.active {
@@ -743,8 +579,9 @@
 }
 
 .user_section {
-    background: #ffffff;
+    background: #fff;
     border-radius: @border-radius;
+    margin-top: 24px;
     .avatar {
         width: 144px;
         text-align: center;
@@ -763,20 +600,19 @@
 }
 
 /*面包屑导航*/
-.bread_crumb {
+.breadcrumb_wrapper {
     display: flex;
     align-items: center;
+    padding: 15px 0;
     .breadcrumb {
         background: 0;
         margin-bottom: 0;
-        height: 54px;
-        line-height: 54px;
         padding: 0;
+        flex: 1;
     }
     .search_bar {
         display: flex;
-        padding: 20px 0;
-        input {
+        .search_input {
             height: 38px;
             line-height: 38px;
             border: #d9d9d9 solid 1px;
@@ -785,17 +621,17 @@
             min-width: 230px;
             padding: 0 8px;
         }
-        button {
+        .search_button {
             height: 38px;
             background: @color-primary;
-            color: #ffffff;
+            color: #fff;
             border: 0;
             padding: 0 10px;
             border-radius: 0 @border-radius @border-radius 0;
-            i.iconfont {
+            .iconfont {
                 font-size: 14px;
             }
-            + button {
+            &.map_btn {
                 margin-left: 10px;
                 border-radius: @border-radius;
             }
@@ -803,39 +639,15 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .bread_crumb {
-        flex-wrap: wrap;
-        background: #f8f8f8;
-        .breadcrumb {
-            display: none;
-        }
-        .search_bar {
-            width: 100%;
-            display: flex;
-            padding: 15px 0;
-            input {
-                flex: 1;
-                min-width: auto;
-            }
-            button {
-                + button {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
 /*筛选*/
-.filter_wrapper_pc {
+.filter_wrapper {
     background: #f4f4f4;
     border-radius: @border-radius;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 5px 0;
     .filter {
         display: flex;
-        padding: 8px 20px 0px;
+        padding: 8px 15px 0px;
         font-size: 13px;
         line-height: 25px;
         .left {
@@ -852,7 +664,7 @@
                 &.active {
                     background: @color-primary;
                     border-radius: @border-radius;
-                    color: #ffffff;
+                    color: #fff;
                 }
             }
             .search_bar {
@@ -873,7 +685,7 @@
                     border-radius: 0 @border-radius @border-radius 0;
                     border: #ebebeb solid 1px;
                     border-left: 0;
-                    background: #ffffff;
+                    background: #fff;
                     padding: 0 10px;
                     float: left;
                     cursor: pointer;
@@ -886,9 +698,70 @@
     }
 }
 
-@media screen and(max-width: 768px) {
-    .filter_wrapper_pc {
-        display: none;
+.filter_box {
+    position: fixed;
+    left: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: -5px 2px 5px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease;
+    &.open {
+        left: 64px;
+    }
+    .filter_group {
+        padding: 8px 0 15px;
+        flex: 1;
+        overflow: hidden;
+        overflow-y: auto;
+        .filter {
+            margin: 0;
+            padding: 0 15px;
+            dt {
+                font-size: 16px;
+                font-weight: 400;
+                padding: 2px 0 10px;
+                text-align: left;
+            }
+            dd {
+                a {
+                    display: inline-block;
+                    min-width: 100px;
+                    text-align: center;
+                    padding: 5px 15px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    float: left;
+                    background: @color-bg;
+                    font-size: 13px;
+                    &.active {
+                        background: @color-primary;
+                        border-radius: @border-radius;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .btn_group {
+        display: flex;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, .05);
+        .cancel_btn, .submit_btn {
+            border: 0;
+            height: 56px;
+            flex: 1;
+            background: @color-bg;
+            font-size: 15px;
+        }
+        .submit_btn {
+            background: @color-primary;
+            color: #fff;
+        }
     }
 }
 
@@ -896,28 +769,28 @@
 .sort_wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 14px;
-    a {
+    background: @color-bg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: @border-radius;
+    .item {
         line-height: 1.8;
-        padding: 0 10px;
-        margin-right: 15px;
-        i {
-            margin-left: 5px;
+        padding: 0 15px;
+        cursor: pointer;
+        .iconfont {
             &::before {
                 vertical-align: -1px;
             }
         }
+        &.item_shaixuan {
+            display: none;
+        }
     }
 }
 
-@media screen and(max-width: 768px) {
-    .sort_wrapper {
-        display: none;
-    }
-}
-
-.detail_title_pc {
+.house_detail_title {
     background: #f5f5f6;
     height: 120px;
     .container {
@@ -928,12 +801,15 @@
             font-size: 24px;
             flex: 1;
         }
-        .button_group {
-            button {
+        .btn_group {
+            .attention_btn, .remind_btn {
                 line-height: 42px;
                 padding: 0 25px;
                 border-radius: @border-radius;
                 box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+            }
+            .attention_btn {
+                margin-right: 10px;
             }
         }
     }
@@ -941,16 +817,14 @@
 
 /*房源信息*/
 .overview {
-    .col {
-        flex-basis: auto;
-        flex-grow: 0;
-    }
+    display: flex;
     .gallery {
         width: 60%;
         .preview {
+            height: 480px;
             .swiper-container {
                 width: 100%;
-                height: 472px;
+                height: 100%;
                 border-radius: @border-radius;
                 overflow: hidden;
                 .swiper-wrapper {
@@ -966,7 +840,7 @@
                     width: auto;
                     left: auto;
                     background: rgba(0, 0, 0, .8);
-                    color: #ffffff;
+                    color: #fff;
                     padding: 3px 10px;
                     border-radius: 50px;
                 }
@@ -979,8 +853,8 @@
             .swiper-button-next {
                 width: 30px;
                 height: 82px;
-                background: #333333;
-                color: #ffffff;
+                background: #333;
+                color: #fff;
                 border-radius: @border-radius;
                 opacity: 1 !important;
                 display: flex;
@@ -1001,7 +875,6 @@
                         img {
                             width: 100%;
                             height: 100%;
-                            border-radius: @border-radius;
                         }
                         &.swiper-slide-thumb-active {
                             opacity: 1;
@@ -1013,6 +886,10 @@
     }
     .content {
         width: 40%;
+        padding-left: 24px;
+        .title {
+            font-size: 24px;
+        }
         .price {
             margin-bottom: 10px;
             .starting {
@@ -1064,26 +941,34 @@
                 padding-right: 20px;
                 margin-right: 10px;
             }
+            .attention_btn, .remind_btn {
+                display: none;
+            }
         }
     }
 }
 
-.hourse_content {
-    .house_photo {
-        img {
-            width: 100%;
-            border-radius: @border-radius;
-            margin-bottom: 10px;
-        }
-    }
-    > [class^='col'] {
-        flex-basis: auto;
-    }
+/*分页*/
+.pagination_pc {
+    margin: 20px 0 40px;
+}
+
+.pagination_mobile {
+    display: none;
+}
+
+.house_content {
     .left {
         width: 60%;
+        float: left;
+        .house_photo {
+            img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
         .house_estate_intro {
             img {
-                border-radius: @border-radius;
                 width: 100%;
             }
             .title {
@@ -1098,20 +983,15 @@
     }
     .right {
         width: 40%;
-        position: relative;
-
-        .broker_group {
-            visibility: hidden;
-            &.sticky {
-                visibility: visible;
-            }
-        }
+        float: right;
+        padding-left: 24px;
     }
 }
 
 /*经纪人*/
 .broker_group {
-    position: sticky;
+    background: #fff;
+    z-index: 1000;
     .broker {
         display: flex;
         padding: 15px 0;
@@ -1127,7 +1007,6 @@
             img {
                 width: 100%;
                 height: 100%;
-                border-radius: @border-radius;
             }
         }
         .content {
@@ -1158,8 +1037,174 @@
             img {
                 width: 100%;
                 height: 100%;
-                border-radius: @border-radius;
             }
+        }
+    }
+}
+
+/*文章列表*/
+.news_list {
+    margin-bottom: 40px;
+    .news {
+        display: flex;
+        margin-bottom: 20px;
+        .thumb {
+            display: block;
+            width: 180px;
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            flex: 1;
+            padding-left: @spacing * 2;
+            .title {
+                font-size: 18px;
+                color: #000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                margin: 3px 0 5px;
+            }
+            .date {
+                font-size: 12px;
+                color: rgba(0, 0, 0, .5);
+                margin-bottom: 8px;
+            }
+            .desc {
+                color: rgba(0, 0, 0, .8);
+                line-height: 1.8;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+}
+
+/*文章详细*/
+.news_detail {
+    max-width: 750px;
+    margin: 0 auto;
+    .title {
+        font-size: 26px;
+        margin: 10px 0 5px;
+    }
+    .time {
+        color: rgba(0, 0, 0, .7);
+        margin-bottom: 15px;
+    }
+    .content {
+        padding-bottom: 50px;
+        line-height: 1.8;
+        font-size: 16px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+/*登录*/
+.login_wrapper {
+    height: 100%;
+    //background-image: url("../images/login_bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    .login_header {
+        padding: 32px 0 0;
+        text-align: center;
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon {
+                width: 180px;
+                height: 40px;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+            }
+        }
+        .desc {
+            color: rgba(0, 0, 0, .45);
+            margin-top: 12px;
+            margin-bottom: 40px;
+        }
+    }
+    .login_form {
+        width: 368px;
+        border-radius: 8px;
+        margin: 0 auto;
+        flex: 1 1;
+        .form-control {
+            height: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .btn {
+            height: 40px;
+            margin-top: 40px;
+        }
+        .link_group {
+            text-align: center;
+            .link {
+                margin-top: 20px;
+            }
+        }
+    }
+    .login_footer {
+        padding: 0 16px;
+        margin: 48px 0 24px;
+        text-align: center;
+        color: rgba(0, 0, 0, .45);
+    }
+}
+
+/*拍卖提醒*/
+.remind_group {
+    .house {
+        display: flex;
+        .thumb {
+            width: 180px;
+            margin-bottom: 0;
+        }
+        .content {
+            padding-left: 15px;
+            display: flex;
+            flex: 1;
+            align-self: center;
+            .attr {
+                margin-bottom: 5px;
+                .price {
+                    big {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .section {
+                flex: 1;
+            }
+            .btn_group {
+                align-self: center;
+                padding-left: 15px;
+                .btn{
+                    background: @color-bg;
+                }
+            }
+        }
+        .state {
+            left: 0;
+            top: 10px;
+            border-radius: 0 20px 20px 0;
         }
     }
 }

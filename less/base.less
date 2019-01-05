@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 html, body {
@@ -17,7 +18,7 @@ a {
     color: @color;
     &:hover {
         text-decoration: none;
-        color: #000000;
+        color: #000;
     }
 }
 
@@ -25,7 +26,7 @@ ul, li, ol {
     list-style: none;
 }
 
-dl, ol, ul {
+dl, dt, dd, ol, ul {
     margin-bottom: 0;
 }
 
@@ -35,17 +36,34 @@ input, textarea, button, a, div {
     }
 }
 
+input[type="text"] {
+    -webkit-appearance: none;
+}
+
 img {
     vertical-align: top;
+    border-radius: @border-radius;
 }
 
 .iconfont {
-    font-size: initial;
+    font-size: 14px;
 }
 
 /*字号*/
 .fz1_2 {
     font-size: 1.2rem;
+}
+
+.fz_12 {
+    font-size: 12px;
+}
+
+.fz_14 {
+    font-size: 14px;
+}
+
+.fz_16 {
+    font-size: 16px;
 }
 
 /*margin*/
@@ -71,3 +89,10 @@ img {
 }
 
 /*padding*/
+.pa_0 {
+    padding: 0 !important;
+}
+
+.pt_0 {
+    padding-top: 0 !important;
+}

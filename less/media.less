@@ -1,0 +1,493 @@
+@media screen and (max-width: 991px) {
+    /*导航*/
+    .navbar {
+        background: @color-primary;
+        .logo {
+            font-size: 28px;
+        }
+        .navbar-collapse {
+            ul:first-child {
+                margin-top: 10px;
+            }
+            .nav-link {
+                padding: 15px 0;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+        .user {
+            border: 0;
+            margin: 0;
+            &:hover {
+                background: transparent;
+                .nav-link {
+                    color: #fff;
+                }
+            }
+            .nav-link {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /*banner*/
+    .banner_wrapper {
+        margin-top: 0;
+        height: 480px;
+    }
+
+    /*搜索*/
+    .search_wrapper {
+        width: 720px;
+    }
+
+    /*数据*/
+    .analysis_wrapper {
+        .item {
+            width: 100%;
+            .icon {
+                display: none;
+            }
+            .content {
+                text-align: center;
+            }
+        }
+    }
+
+    /*近期政策*/
+    .news_group {
+        .right {
+            .news {
+                margin-bottom: 0;
+                margin-top: 15px;
+                .thumb {
+                    width: 40%;
+                }
+                .content {
+                    flex: 1;
+                    .title {
+                        font-size: 16px;
+                    }
+                    .desc {
+                        -webkit-line-clamp: 4;
+                    }
+                }
+            }
+        }
+    }
+
+    /*合作伙伴*/
+    .partner_group {
+        .partner {
+            width: 100% / 3;
+        }
+    }
+
+    /*拍卖提醒*/
+    .remind_group {
+        .house {
+            .content {
+                display: initial;
+                .btn_group {
+                    padding: 0 0 0;
+                    .btn {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /*banner*/
+    .banner_wrapper {
+        height: 240px;
+    }
+
+    /*搜索*/
+    .search_wrapper {
+        width: 520px;
+        padding: 15px 0 0;
+        top: 170px;
+        .search_type {
+            display: none;
+        }
+        .search_form {
+            background: transparent;
+            height: 40px;
+            .search_input {
+                border-radius: @border-radius 0 0 @border-radius;
+                padding: 0 15px;
+                border: #eee solid 1px;
+                border-right: 0;
+            }
+            .search_button {
+                border-radius: 0 @border-radius @border-radius 0;
+                line-height: 40px;
+                font-size: 14px;
+                padding: 0 15px;
+                i.iconfont {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /*模块标题*/
+    .headline {
+        padding: 15px 0;
+    }
+
+    /*精品房源*/
+    .house_group {
+        .house {
+            display: flex;
+            .thumb {
+                width: 40%;
+                margin-bottom: 0;
+                .state_tag {
+                    display: none;
+                }
+            }
+            .content {
+                flex: 1;
+                padding-left: 15px;
+                .name {
+                    font-size: 18px;
+                }
+                .attr {
+                    line-height: 1.8;
+                    .price {
+                        big {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .state {
+                left: 0;
+                top: 5px;
+                right: auto;
+                bottom: auto;
+                font-size: 12px;
+                border-radius: 0 24px 24px 0;
+                width: 70px;
+                height: 24px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    /*近期政策*/
+    .news_group {
+        .right {
+            .news {
+                margin-top: 10px !important;
+                .content {
+                    .desc {
+                        -webkit-line-clamp: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    /*面包屑导航*/
+    .breadcrumb_wrapper {
+        .breadcrumb {
+            display: none;
+        }
+        .search_bar {
+            flex: 1;
+            .search_input {
+                flex: 1;
+                min-width: auto;
+            }
+            .map_btn {
+                display: none;
+            }
+        }
+    }
+
+    /*筛选*/
+    .filter_wrapper {
+        display: none;
+    }
+
+    /*排序*/
+    .sort_wrapper {
+        .item {
+            padding: 0;
+            text-align: center;
+            flex: 1;
+        }
+        .item_shaixuan {
+            display: initial !important;
+        }
+    }
+
+    /*分页*/
+    .pagination_pc {
+        display: none;
+    }
+
+    .pagination.pagination_mobile {
+        display: flex;
+        margin: 0 0 20px;
+        .page-item {
+            margin: 0;
+            flex: 1;
+            .page-link {
+                height: 48px;
+                line-height: 48px;
+                padding: 0 30px;
+            }
+        }
+    }
+
+    /*详情*/
+    .house_detail_title {
+        display: none;
+    }
+
+    .breadcrumb_wrapper_detail {
+        padding: 5px 0;
+    }
+
+    /*overview*/
+    .overview {
+        flex-wrap: wrap;
+        .gallery {
+            width: 100%;
+            .preview {
+                height: 350px;
+                margin-bottom: 10px;
+            }
+            .thumb {
+                display: none;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 0;
+            .info {
+                .item {
+                    .top {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .button_group {
+                display: flex;
+                .btn {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    border-radius: 0;
+                    box-shadow: none;
+                    background: @color-primary;
+                    color: #fff;
+                    padding-left: 0;
+                    padding-right: 0;
+                    flex: 1;
+                    display: initial;
+                    &:first-child {
+                        border-radius: @border-radius 0 0 @border-radius;
+                    }
+                    &:last-child {
+                        border-radius: 0 @border-radius @border-radius 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /*房源信息*/
+    .house_content {
+        .left, .right {
+            width: 100%;
+            float: none;
+        }
+        .right {
+            padding: 0;
+        }
+    }
+
+    /*小区介绍*/
+    .house_estate_intro {
+        margin-bottom: 12px;
+        .title {
+            margin-top: 12px;
+        }
+    }
+
+    /*经纪人*/
+    .broker_group {
+        .broker {
+            .content {
+                .mobile {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    /*文章列表*/
+    .news_list {
+        margin-bottom: 20px;
+        .news {
+            position: relative;
+            .thumb {
+                width: 40%;
+            }
+            &::after {
+                content: '';
+                border-bottom: @border-color solid 1px;
+                left: calc(~'40% + 15px');
+                right: 0;
+                bottom: -10px;
+                position: absolute;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /*左侧菜单*/
+    .user_sidebar {
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 48px;
+            li {
+                width: 25%;
+                text-align: center;
+                a {
+                    padding: 0;
+                }
+                &:not(.active):hover {
+                    a {
+                        background: @color-primary;
+                        color: #fff;
+                    }
+                }
+                &.active {
+                    a {
+                        font-weight: 700;
+                        color: @color-primary;
+                    }
+                    &::before {
+                        top: auto;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        border-bottom: @color-primary 2px solid;
+                    }
+                }
+            }
+        }
+    }
+
+    .user_section {
+        margin-top: 12px;
+    }
+
+}
+
+@media screen and (max-width: 577px) {
+    /*banner*/
+    .banner_wrapper {
+        height: 200px;
+    }
+
+    /*搜索*/
+    .search_wrapper {
+        position: initial;
+        width: 100%;
+        padding: 15px;
+        background: @color-bg;
+    }
+
+    /*数据*/
+    .analysis_wrapper {
+        display: none;
+    }
+
+    /*模块标题*/
+    .headline {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    /*精品房源*/
+    .house_group {
+        .house {
+            .content {
+                .name {
+                    font-size: 16px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                }
+                .attr {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    /*热门房源*/
+    .hot_hourse_group {
+        .hot_hourse {
+            .content {
+                .price {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /*近期政策*/
+    .news_group {
+        .right {
+            .news {
+                .content {
+                    .desc {
+                        -webkit-line-clamp: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    /*合作伙伴*/
+    .partner_group {
+        .partner {
+            width: 100% / 2;
+        }
+    }
+
+    /*overview*/
+    .overview {
+        .gallery {
+            .preview {
+                height: 240px;
+            }
+        }
+    }
+
+    /*login*/
+    .login_wrapper {
+        .login_form {
+            width: 100%;
+        }
+    }
+}

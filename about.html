@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>法拍房</title>
-    <script src="../js/common.js"></script>
 </head>
-<body class="user_body_bg">
+<body>
 
 <!--导航条-->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-primary">
@@ -70,68 +70,27 @@
     </div>
 </nav>
 
-<div class="container mb_3">
-    <div class="row">
-        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
-            <div class="user_sidebar">
-                <ul class="menu">
-                    <li>
-                        <a href="/user/remind.html">拍卖提醒</a>
-                    </li>
-                    <li>
-                        <a href="/user/record.html">找房记录</a>
-                    </li>
-                    <li>
-                        <a href="/user/subscribe.html">预约清单</a>
-                    </li>
-                    <li>
-                        <a href="/user/attention.html">我的关注</a>
-                    </li>
-                    <li>
-                        <a href="/user/recommend.html">房源推荐</a>
-                    </li>
-                    <li>
-                        <a href="/user/recently.html">最近新增</a>
-                    </li>
-                    <li>
-                        <a href="profile.html">个人信息</a>
-                    </li>
-                    <li class="active">
-                        <a href="change_password.html">修改密码</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-xl-10 col-lg-10 col-md-3 col-sm-12 col-12">
-            <div class="user_section">
-                <div class="card">
-                    <div class="user_section_title border-bottom">修改密码</div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-4">
-                                <div class="form-group">
-                                    <label>旧密码</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>新密码</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>确认新密码</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <button type="submit" class="btn btn-primary">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <!--面包屑导航-->
+    <div class="breadcrumb_wrapper breadcrumb_wrapper_detail">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首页</a></li>
+            <li class="breadcrumb-item active">关于我们</li>
+        </ol>
     </div>
+
+    <!--详细-->
+    <div class="news_detail">
+        <div class="title">
+            关于我们
+        </div>
+        <div class="time"></div>
+        <div class="content">内容</div>
+    </div>
+
 </div>
 
-
+<!--footer-->
 <div class="footer">
     <div class="footer_top">
         <div class="container">
@@ -165,8 +124,8 @@
                     </div>
                 </div>
                 <div class="col-xl-3 qrcode mt_3">
-                    <img src="./../images/gongzhonghao.png" alt="">
-                    <img src="./../images/xiaochengxu.png" alt="">
+                    <img src="./images/gongzhonghao.png" alt="">
+                    <img src="./images/xiaochengxu.png" alt="">
                 </div>
             </div>
         </div>
@@ -179,13 +138,30 @@
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
     (function() {
-        $('#searchType li').on('click', function() {
+        /*
+        * 搜索类型切换
+        * */
+        $('[data-name="searchType"] li').on('click', function() {
             $(this).addClass('active').siblings().removeClass('active')
+        })
+
+        /*
+        * 切换 mobile 筛选条件显示隐藏
+        * 给 #filterBox 添加 open 即可显示，反之隐藏
+        * */
+        $('[data-toggle="filter"]').on('click', function(e) {
+            var $filterBox = $('#filterBox')
+            if ($filterBox.hasClass('open')) {
+                $filterBox.removeClass('open')
+            } else {
+                $filterBox.addClass('open')
+            }
+            e.stopPropagation()
         })
     })()
 </script>
-
 </body>
 </html>

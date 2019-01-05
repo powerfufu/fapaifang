@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
@@ -12,9 +13,9 @@
 
 <!--导航条-->
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="##">
-            <img src="./images/logo.png" alt="" class="logo">
+    <div class="container navbar_container">
+        <a class="navbar-brand" href="/">
+            <i class="iconfont icon-logo-h logo"></i>
         </a>
         <div class="local dropdown">
             <div data-toggle="dropdown"><i class="iconfont icon-dingwei">&nbsp;</i>北京</div>
@@ -31,37 +32,47 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">首页</a>
+                    <a class="nav-link" href="/">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">司法拍卖</a>
+                    <a class="nav-link" href="/house.html">价格</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">国有资产</a>
+                    <a class="nav-link" href="/house.html">户型</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">金融贷款</a>
+                    <a class="nav-link" href="/house.html">住宅</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">服务专员</a>
+                    <a class="nav-link" href="/house.html">商业</a>
                 </li>
-                <li class="nav-item login">
-                    <a href="##" class="nav-link">登录</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/house.html">别墅</a>
                 </li>
-                <li class="nav-item register">
-                    <a href="##" class="nav-link">注册</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/house.html">国有资产</a>
                 </li>
-                <li class="nav-item user">
-                    <div class="action_btn">
-                        <a href="##">登录</a>/<a href="##">注册</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/profile.html"><i class="iconfont icon-user">&nbsp;</i>个人中心</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav user">
+                <li class="nav-item">
+                    <a href="/login.html" class="nav-link">登录</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/register.html" class="nav-link">注册</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 <!--banner-->
-<div class="swiper-container banner_swiper">
+<div class="swiper-container banner_wrapper" id="banner">
     <!--slider-->
     <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image: url('./images/banner.png')"></div>
@@ -70,7 +81,7 @@
     <div class="swiper-pagination"></div>
 </div>
 
-<!--搜索条-->
+<!--搜索-->
 <div class="search_wrapper">
     <ul class="search_type" data-name="searchType">
         <li class="active">全部</li>
@@ -79,436 +90,406 @@
         <li>别墅</li>
         <li>国有资产</li>
     </ul>
-    <div class="search_bar">
-        <input type="text">
-        <button type="button">
+    <div class="search_form">
+        <input type="text" class="search_input">
+        <button type="button" class="search_button">
             <i class="iconfont icon-sousuo">&nbsp;</i>
             开始搜索
         </button>
     </div>
 </div>
 
-<div class="container analysis">
-    <div class="row">
-        <div class="col">
-            <div class="item">
-                <div class="icon">
-                    <i class="iconfont icon-loufang"></i>
-                </div>
-                <div class="content">
-                    <div class="number">66</div>
-                    <div class="explain">上周新增房产</div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="item second">
-                <div class="icon">
-                    <i class="iconfont icon-chengjiao"></i>
-                </div>
-                <div class="content">
-                    <div class="number">1486</div>
-                    <div class="explain">上周成交房产</div>
+<div class="container">
+    <!--数据-->
+    <div class="analysis_wrapper">
+        <div class="row">
+            <div class="col">
+                <div class="item">
+                    <div class="icon">
+                        <i class="iconfont icon-loufang"></i>
+                    </div>
+                    <div class="content">
+                        <div class="number">66</div>
+                        <div class="explain">上周新增房产</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="item third">
-                <div class="icon">
-                    <i class="iconfont icon-qushi"></i>
+            <div class="col">
+                <div class="item second">
+                    <div class="icon">
+                        <i class="iconfont icon-chengjiao"></i>
+                    </div>
+                    <div class="content">
+                        <div class="number">1486</div>
+                        <div class="explain">上周成交房产</div>
+                    </div>
                 </div>
-                <div class="content">
-                    <div class="number">13%</div>
-                    <div class="explain">折扣率</div>
+            </div>
+            <div class="col">
+                <div class="item third">
+                    <div class="icon">
+                        <i class="iconfont icon-qushi"></i>
+                    </div>
+                    <div class="content">
+                        <div class="number">13%</div>
+                        <div class="explain">折扣率</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--精品房源-->
-<div class="module">
-    <div class="container module_title">
+    <!--精品房源-->
+    <div class="headline">
         精品房源
         <span class="en">Fine houses</span>
     </div>
-    <div class="module_body">
-        <div class="container">
-            <div class="row house_group">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house begin">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">即将开始</div>
-                    </div>
+    <div class="row house_group">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house begin">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house underway">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">正在进行</div>
-                    </div>
+                <div class="state">即将开始</div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house underway">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                            <span class="state_tag">已结束</span>
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">已结束</div>
-                    </div>
+                <div class="state">正在进行</div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                    <span class="state_tag">已结束</span>
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                            <span class="state_tag">中止</span>
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">中止</div>
-                    </div>
+                <div class="state">已结束</div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                    <span class="state_tag">中止</span>
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                            <span class="state_tag">撤回</span>
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">撤回</div>
-                    </div>
+                <div class="state">中止</div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                    <span class="state_tag">撤回</span>
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="house">
-                        <a href="##" class="thumb">
-                            <img src="./images/img_1.png" class="cover">
-                            <span class="state_tag">暂缓</span>
-                        </a>
-                        <div class="content">
-                            <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
-                            <ul class="attr">
-                                <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
-                                <li>市场价：￥137万</li>
-                                <li>开拍时间：2018年09月03日 10:00</li>
-                            </ul>
-                        </div>
-                        <div class="state">暂缓</div>
-                    </div>
+                <div class="state">撤回</div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="house">
+                <a href="##" class="thumb">
+                    <img src="./images/img_1.png" class="cover">
+                    <span class="state_tag">暂缓</span>
+                </a>
+                <div class="content">
+                    <div class="name"><a href="##">唐山市路南区渤海豪庭7幢4单元1301室房地产</a></div>
+                    <ul class="attr">
+                        <li>起拍价：<span class="price">￥<big>76.8万</big></span></li>
+                        <li>市场价：￥137万</li>
+                        <li>开拍时间：2018年09月03日 10:00</li>
+                    </ul>
                 </div>
+                <div class="state">暂缓</div>
             </div>
         </div>
     </div>
-</div>
 
-<!--热门房源-->
-<div class="module">
-    <div class="container module_title">
+    <!--热门房源-->
+    <div class="headline">
         热门房源
         <span class="en">Hot housing</span>
     </div>
-    <div class="module_body">
-        <div class="container">
-            <div class="row hot_hourse_group">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="##" class="hot_hourse">
-                        <img src="./images/img_1.png" class="thumb">
-                        <div class="content">
-                            <div class="mask"></div>
-                            <div class="price">311.5万<span>/起拍</span></div>
-                            <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
-                        </div>
-                    </a>
+    <div class="row hot_hourse_group">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="##" class="hot_hourse">
+                <img src="./images/img_1.png" class="thumb">
+                <div class="content">
+                    <div class="mask"></div>
+                    <div class="price">311.5万<span>/起拍</span></div>
+                    <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="##" class="hot_hourse">
-                        <img src="./images/img_1.png" class="thumb">
-                        <div class="content">
-                            <div class="mask"></div>
-                            <div class="price">311.5万<span>/起拍</span></div>
-                            <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
-                        </div>
-                    </a>
+            </a>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="##" class="hot_hourse">
+                <img src="./images/img_1.png" class="thumb">
+                <div class="content">
+                    <div class="mask"></div>
+                    <div class="price">311.5万<span>/起拍</span></div>
+                    <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="##" class="hot_hourse">
-                        <img src="./images/img_1.png" class="thumb">
-                        <div class="content">
-                            <div class="mask"></div>
-                            <div class="price">311.5万<span>/起拍</span></div>
-                            <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
-                        </div>
-                    </a>
+            </a>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="##" class="hot_hourse">
+                <img src="./images/img_1.png" class="thumb">
+                <div class="content">
+                    <div class="mask"></div>
+                    <div class="price">311.5万<span>/起拍</span></div>
+                    <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="##" class="hot_hourse">
-                        <img src="./images/img_1.png" class="thumb">
-                        <div class="content">
-                            <div class="mask"></div>
-                            <div class="price">311.5万<span>/起拍</span></div>
-                            <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
-                        </div>
-                    </a>
+            </a>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="##" class="hot_hourse">
+                <img src="./images/img_1.png" class="thumb">
+                <div class="content">
+                    <div class="mask"></div>
+                    <div class="price">311.5万<span>/起拍</span></div>
+                    <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="##" class="hot_hourse">
-                        <img src="./images/img_1.png" class="thumb">
-                        <div class="content">
-                            <div class="mask"></div>
-                            <div class="price">311.5万<span>/起拍</span></div>
-                            <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
-                        </div>
-                    </a>
+            </a>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="##" class="hot_hourse">
+                <img src="./images/img_1.png" class="thumb">
+                <div class="content">
+                    <div class="mask"></div>
+                    <div class="price">311.5万<span>/起拍</span></div>
+                    <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <a href="##" class="hot_hourse">
-                        <img src="./images/img_1.png" class="thumb">
-                        <div class="content">
-                            <div class="mask"></div>
-                            <div class="price">311.5万<span>/起拍</span></div>
-                            <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
-                        </div>
-                    </a>
+            </a>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+            <a href="##" class="hot_hourse">
+                <img src="./images/img_1.png" class="thumb">
+                <div class="content">
+                    <div class="mask"></div>
+                    <div class="price">311.5万<span>/起拍</span></div>
+                    <div class="name">北京朝阳区延静里中街3号院5号楼21层2107号房屋</div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
-</div>
 
-<div class="module">
-    <div class="container module_title">
+    <!--近期政策-->
+    <div class="headline">
         近期政策
         <span class="en">recent policy</span>
     </div>
-    <div class="module_body">
-        <div class="container">
-            <div class="row news_group">
-                <div class="col-xl col-lg">
-                    <a href="##" class="left">
-                        <img src="./images/img_3.png" class="thumb">
-                        <div class="title">亚洲最大社区南大门—立水桥</div>
+    <div class="row news_group">
+        <div class="col-xl col-lg">
+            <a href="##" class="left">
+                <img src="./images/img_3.png" class="thumb">
+                <div class="title">亚洲最大社区南大门—立水桥</div>
+            </a>
+        </div>
+        <div class="col-xl col-lg">
+            <div class="right">
+                <div class="news">
+                    <a href="##" class="thumb">
+                        <img src="./images/img_2.png">
                     </a>
+                    <div class="content">
+                        <div class="title"><a href="##">北京调控继续：法拍房也被纳入限购范围</a></div>
+                        <div class="date">2018/12/15 10:53:09</div>
+                        <div class="desc">
+                            北京市半官方自媒体【京房字】发布消息称，近日，与“法拍房”有关的几个部门，包括北京市住建委、北京市高级人民法院、北京市规划国土委召开会议，就“法拍房”的购房资格问题进行了研究，明确了“法拍房”纳入限购的相关事项。三部门明确，将住建部门对竞拍人购房资格审查纳入北京市司法竞拍流程。法院竞拍房产为纳入北京市限购政策范围内、且竞拍方为自然人的（个体工商户、个人独资企业视同自然人），要求竞拍家庭或个人符合本市限购政策。
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl col-lg">
-                    <div class="right">
-                        <div class="news">
-                            <a href="##" class="thumb">
-                                <img src="./images/img_2.png">
-                            </a>
-                            <div class="content">
-                                <div class="title"><a href="##">北京调控继续：法拍房也被纳入限购范围</a></div>
-                                <div class="date">2018/12/15 10:53:09</div>
-                                <div class="desc">
-                                    北京市半官方自媒体【京房字】发布消息称，近日，与“法拍房”有关的几个部门，包括北京市住建委、北京市高级人民法院、北京市规划国土委召开会议，就“法拍房”的购房资格问题进行了研究，明确了“法拍房”纳入限购的相关事项。三部门明确，将住建部门对竞拍人购房资格审查纳入北京市司法竞拍流程。法院竞拍房产为纳入北京市限购政策范围内、且竞拍方为自然人的（个体工商户、个人独资企业视同自然人），要求竞拍家庭或个人符合本市限购政策。
-                                </div>
-                            </div>
+                <div class="news">
+                    <a href="##" class="thumb">
+                        <img src="./images/img_2.png">
+                    </a>
+                    <div class="content">
+                        <div class="title"><a href="##">北京调控继续：法拍房也被纳入限购范围</a></div>
+                        <div class="date">2018/12/15 10:53:09</div>
+                        <div class="desc">
+                            北京市半官方自媒体【京房字】发布消息称，近日，与“法拍房”有关的几个部门，包括北京市住建委、北京市高级人民法院、北京市规划国土委召开会议，就“法拍房”的购房资格问题进行了研究，明确了“法拍房”纳入限购的相关事项。三部门明确，将住建部门对竞拍人购房资格审查纳入北京市司法竞拍流程。法院竞拍房产为纳入北京市限购政策范围内、且竞拍方为自然人的（个体工商户、个人独资企业视同自然人），要求竞拍家庭或个人符合本市限购政策。
                         </div>
-                        <div class="news">
-                            <a href="##" class="thumb">
-                                <img src="./images/img_2.png">
-                            </a>
-                            <div class="content">
-                                <div class="title"><a href="##">北京调控继续：法拍房也被纳入限购范围</a></div>
-                                <div class="date">2018/12/15 10:53:09</div>
-                                <div class="desc">
-                                    北京市半官方自媒体【京房字】发布消息称，近日，与“法拍房”有关的几个部门，包括北京市住建委、北京市高级人民法院、北京市规划国土委召开会议，就“法拍房”的购房资格问题进行了研究，明确了“法拍房”纳入限购的相关事项。三部门明确，将住建部门对竞拍人购房资格审查纳入北京市司法竞拍流程。法院竞拍房产为纳入北京市限购政策范围内、且竞拍方为自然人的（个体工商户、个人独资企业视同自然人），要求竞拍家庭或个人符合本市限购政策。
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news">
-                            <a href="##" class="thumb">
-                                <img src="./images/img_2.png">
-                            </a>
-                            <div class="content">
-                                <div class="title"><a href="##">北京调控继续：法拍房也被纳入限购范围</a></div>
-                                <div class="date">2018/12/15 10:53:09</div>
-                                <div class="desc">
-                                    北京市半官方自媒体【京房字】发布消息称，近日，与“法拍房”有关的几个部门，包括北京市住建委、北京市高级人民法院、北京市规划国土委召开会议，就“法拍房”的购房资格问题进行了研究，明确了“法拍房”纳入限购的相关事项。三部门明确，将住建部门对竞拍人购房资格审查纳入北京市司法竞拍流程。法院竞拍房产为纳入北京市限购政策范围内、且竞拍方为自然人的（个体工商户、个人独资企业视同自然人），要求竞拍家庭或个人符合本市限购政策。
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <a href="##" class="thumb">
+                        <img src="./images/img_2.png">
+                    </a>
+                    <div class="content">
+                        <div class="title"><a href="##">北京调控继续：法拍房也被纳入限购范围</a></div>
+                        <div class="date">2018/12/15 10:53:09</div>
+                        <div class="desc">
+                            北京市半官方自媒体【京房字】发布消息称，近日，与“法拍房”有关的几个部门，包括北京市住建委、北京市高级人民法院、北京市规划国土委召开会议，就“法拍房”的购房资格问题进行了研究，明确了“法拍房”纳入限购的相关事项。三部门明确，将住建部门对竞拍人购房资格审查纳入北京市司法竞拍流程。法院竞拍房产为纳入北京市限购政策范围内、且竞拍方为自然人的（个体工商户、个人独资企业视同自然人），要求竞拍家庭或个人符合本市限购政策。
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--竞拍流程-->
-<div class="module">
-    <div class="module_title">
-        <div class="container">
-            竞拍流程
-            <span class="en">bidding process</span>
-        </div>
+    <!--竞拍流程-->
+    <div class="headline">
+        竞拍流程
+        <span class="en">bidding process</span>
     </div>
-    <div class="module_body">
-        <div class="container">
-            <div class="row flow_group">
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-zixun"></i>
-                        </div>
-                        <div class="name">拍前咨询</div>
-                    </div>
+    <div class="row flow_group">
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-zixun"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-loufang"></i>
-                        </div>
-                        <div class="name">实地考察</div>
-                    </div>
+                <div class="name">拍前咨询</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-loufang"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-xieyiguanli"></i>
-                        </div>
-                        <div class="name">签订代拍协议缴纳履约金</div>
-                    </div>
+                <div class="name">实地考察</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-xieyiguanli"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-baozhengjin"></i>
-                        </div>
-                        <div class="name">缴纳保证金</div>
-                    </div>
+                <div class="name">签订代拍协议缴纳履约金</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-baozhengjin"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-jingpai"></i>
-                        </div>
-                        <div class="name">参加竞拍</div>
-                    </div>
+                <div class="name">缴纳保证金</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-jingpai"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-fukuan"></i>
-                        </div>
-                        <div class="name">成功后付款</div>
-                    </div>
+                <div class="name">参加竞拍</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-fukuan"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-falvwenshu"></i>
-                        </div>
-                        <div class="name">领取法律文书</div>
-                    </div>
+                <div class="name">成功后付款</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-falvwenshu"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-guohu"></i>
-                        </div>
-                        <div class="name">缴税过户</div>
-                    </div>
+                <div class="name">领取法律文书</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-guohu"></i>
                 </div>
-                <div class="col">
-                    <div class="flow">
-                        <div class="icon">
-                            <i class="iconfont icon-fangchan"></i>
-                        </div>
-                        <div class="name">房产移交</div>
-                    </div>
+                <div class="name">缴税过户</div>
+            </div>
+        </div>
+        <div class="col-xl col-lg col-md-4 col-sm-4 col-4 flow_col">
+            <div class="flow">
+                <div class="icon">
+                    <i class="iconfont icon-fangchan"></i>
                 </div>
+                <div class="name">房产移交</div>
             </div>
         </div>
     </div>
-</div>
 
-<!--合作伙伴-->
-<div class="module">
-    <div class="module_title">
-        <div class="container">
-            合作伙伴
-            <span class="en">partner</span>
-        </div>
+    <!--合作伙伴-->
+    <div class="headline">
+        合作伙伴
+        <span class="en">partner</span>
     </div>
-    <div class="module_body">
-        <div class="container">
-            <div class="row partner_group">
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-                <div class="col partner">
-                    <img src="./images/img_4.png">
-                </div>
-            </div>
+    <div class="row partner_group">
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
         </div>
     </div>
 </div>
@@ -524,20 +505,26 @@
                     <div class="tit">联系地址</div>
                     <div class="address">北京市东城区建国门内大街7号光华长安大厦2座1817</div>
                 </div>
-                <div class="col-xl search mt_3">
-                    <ul class="search_type clearfix" data-name="searchType">
-                        <li class="active">全部</li>
-                        <li>住宅</li>
-                        <li>商业</li>
-                        <li>别墅</li>
-                        <li>国有资产</li>
-                    </ul>
-                    <div class="search_bar">
-                        <input type="text" class="search_bar_input" placeholder="输入关键词">
-                        <button type="button" class="search_bar_button">
-                            <i class="iconfont icon-sousuo"></i>
-                            开始搜索
-                        </button>
+                <div class="col-xl mt_3">
+                    <div class="search">
+                        <ul class="search_type clearfix" data-name="searchType">
+                            <li class="active">全部</li>
+                            <li>住宅</li>
+                            <li>商业</li>
+                            <li>别墅</li>
+                            <li>国有资产</li>
+                        </ul>
+                        <div class="search_bar">
+                            <input type="text" class="search_bar_input" placeholder="输入关键词">
+                            <button type="button" class="search_bar_button">
+                                <i class="iconfont icon-sousuo"></i>
+                                开始搜索
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sns">
+                        <a href="##"><i class="iconfont icon-weibo">&nbsp;</i>新浪微博</a>
+                        <a href="##"><i class="iconfont icon-lianjie">&nbsp;</i>今日头条</a>
                     </div>
                 </div>
                 <div class="col-xl-3 qrcode mt_3">
@@ -554,7 +541,6 @@
     </div>
 </div>
 
-
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
@@ -564,10 +550,10 @@
             $(this).addClass('active').siblings().removeClass('active')
         })
 
-        var swiper = new Swiper('.banner_swiper', {
+        var swiper = new Swiper('#banner', {
             loop: true,
             pagination: {
-                el: '.banner_swiper .swiper-pagination',
+                el: '#banner .swiper-pagination',
             },
         })
     })()
