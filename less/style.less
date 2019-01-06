@@ -4,36 +4,45 @@
 .navbar {
     position: relative;
     z-index: 1000;
+
     .navbar_container {
         justify-content: left;
     }
+
     .logo {
         line-height: 1;
         font-size: 38px;
     }
+
     .user {
         border: #fff solid 2px;
         border-radius: 30px;
         margin-left: 15px;
+
         &:hover {
             background: #fff;
+
             .nav-link {
                 color: #000;
             }
         }
+
         .nav-link {
             padding-top: 5px;
             padding-bottom: 5px;
         }
+
         .nav-item {
             &:first-child {
                 .nav-link {
                     padding-right: 0;
+
                     &::after {
                         content: '/';
                     }
                 }
             }
+
             &:last-child {
                 .nav-link {
                     padding-left: 0;
@@ -41,6 +50,7 @@
             }
         }
     }
+
     .local {
         background: rgba(0, 0, 0, .5);
         color: #fff;
@@ -49,13 +59,16 @@
         line-height: 1;
         border-radius: 30px;
         cursor: pointer;
+
         .iconfont {
             font-size: 12px;
         }
+
         .dropdown-menu {
             a {
                 display: block;
                 padding: 10px 15px;
+
                 &:hover {
                     background: #eee;
                 }
@@ -68,14 +81,17 @@
     height: 600px;
     position: relative;
     margin-top: -64px;
+
     .swiper-slide {
         background-position: center;
         background-size: cover;
     }
+
     .swiper-pagination-bullet {
         background: #fff;
         opacity: .8
     }
+
     .swiper-pagination-bullet-active {
         background: @color-primary;
     }
@@ -90,17 +106,20 @@
     right: 0;
     top: 320px;
     margin: auto;
+
     .search_type {
         display: flex;
         font-size: 18px;
         color: #fff;
         margin-bottom: 10px;
         padding-left: 20px;
+
         li {
             cursor: pointer;
             margin-right: 40px;
             position: relative;
             height: 32px;
+
             &.active {
                 &::after {
                     position: absolute;
@@ -113,11 +132,13 @@
             }
         }
     }
+
     .search_form {
         display: flex;
         height: 55px;
         background: #fff;
         border-radius: 55px;
+
         .search_input {
             flex: 1;
             border: 0;
@@ -125,6 +146,7 @@
             padding: 0 20px;
             font-size: 16px;
         }
+
         .search_button {
             padding: 0 30px;
             font-size: 18px;
@@ -141,6 +163,7 @@
 /*数据*/
 .analysis_wrapper {
     margin: 40px 0 20px;
+
     .item {
         width: 90%;
         margin: 0 auto;
@@ -153,27 +176,34 @@
         display: flex;
         align-items: center;
         position: relative;
+
         &.second {
             background: #f77373;
             background-image: linear-gradient(lighten(#f77373, 5), #f77373);
             box-shadow: 0 4px 20px rgba(247, 115, 115, .2);
         }
+
         &.third {
             background: #ff8a57;
             background-image: linear-gradient(lighten(#ff8a57, 5), #ff8a57);
             box-shadow: 0 4px 20px rgba(255, 138, 87, .2);
         }
+
         .icon {
             padding: 0 48px;
+
             .iconfont {
                 font-size: 50px;
             }
         }
+
         .content {
             flex: 1;
+
             .number {
                 font-size: 38px;
             }
+
             .name {
                 font-size: 14px;
             }
@@ -185,6 +215,7 @@
 .headline {
     font-size: 24px;
     padding: 20px 0;
+
     .en {
         font-weight: 300;
         text-transform: uppercase;
@@ -196,15 +227,19 @@
     .house {
         margin-bottom: 20px;
         position: relative;
+
         .thumb {
             margin-bottom: 15px;
             position: relative;
             display: block;
             overflow: hidden;
+
             .cover {
                 width: 100%;
+                height: 240px;
                 border-radius: @border-radius;
             }
+
             .state_tag {
                 position: absolute;
                 background: rgba(255, 255, 255, .8);
@@ -221,6 +256,7 @@
                 box-shadow: 0 0 0 5px rgba(255, 255, 255, .8);
             }
         }
+
         .content {
             .name {
                 font-size: 18px;
@@ -228,9 +264,11 @@
                 margin-bottom: 5px;
                 color: #000;
             }
+
             .attr {
                 line-height: 32px;
                 color: #666;
+
                 .price {
                     big {
                         font-size: 26px;
@@ -238,6 +276,7 @@
                 }
             }
         }
+
         .state {
             width: 90px;
             height: 30px;
@@ -252,6 +291,7 @@
             color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
         }
+
         &.begin {
             .content {
                 .attr {
@@ -260,12 +300,14 @@
                     }
                 }
             }
+
             .state {
                 background: #19aa6b;
                 background-image: linear-gradient(lighten(#19aa6b, 5), #19aa6b);
                 box-shadow: 0 1px 5px rgba(25, 170, 107, .1);
             }
         }
+
         &.underway {
             .content {
                 .attr {
@@ -274,6 +316,7 @@
                     }
                 }
             }
+
             .state {
                 background: #cf141a;
                 background-image: linear-gradient(lighten(#cf141a, 5), #cf141a);
@@ -284,16 +327,19 @@
 }
 
 /*热门房源*/
-.hot_hourse_group {
-    .hot_hourse {
+.hot_house_group {
+    .hot_house {
         position: relative;
         border-radius: @border-radius;
         overflow: hidden;
         margin-bottom: 20px;
         display: block;
+
         .thumb {
             width: 100%;
+            height: 240px;
         }
+
         .content {
             position: absolute;
             left: 0;
@@ -303,6 +349,7 @@
             color: #fff;
             z-index: 1;
             line-height: 1;
+
             .mask {
                 position: absolute;
                 background: rgba(0, 0, 0, .6);
@@ -312,13 +359,16 @@
                 bottom: 0;
                 z-index: -1;
             }
+
             .price {
                 font-size: 20px;
                 margin-bottom: 8px;
+
                 span {
                     font-size: 14px;
                 }
             }
+
             .name {
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -331,14 +381,18 @@
 /*近期政策*/
 .news_group {
     margin-bottom: 20px;
+
     .left {
         position: relative;
         display: block;
         border-radius: @border-radius;
         overflow: hidden;
+
         .thumb {
             width: 100%;
+            height: 376px;
         }
+
         .title {
             position: absolute;
             left: 0;
@@ -355,20 +409,28 @@
             -webkit-line-clamp: 1;
         }
     }
+
     .right {
         .news {
             display: flex;
+
             + .news {
                 margin-top: 14px;
             }
+
             .thumb {
+                width: 36%;
+
                 img {
                     width: 100%;
+                    height: 116px;
                 }
             }
+
             .content {
                 flex: 1;
                 padding-left: @spacing * 2;
+
                 .title {
                     font-size: 18px;
                     color: #000;
@@ -379,11 +441,13 @@
                     -webkit-line-clamp: 1;
                     margin: 0 0 5px;
                 }
+
                 .date {
                     font-size: 12px;
                     color: rgba(0, 0, 0, .5);
                     margin-bottom: 8px;
                 }
+
                 .desc {
                     color: rgba(0, 0, 0, .8);
                     line-height: 1.8;
@@ -402,14 +466,18 @@
 .flow_group {
     .flow_col {
         margin-bottom: 20px;
+
         .flow {
             text-align: center;
+
             .icon {
                 margin-bottom: 8px;
+
                 .iconfont {
                     font-size: 40px;
                 }
             }
+
             .name {
                 line-height: 1.6;
             }
@@ -420,13 +488,16 @@
 /*合作伙伴*/
 .partner_group {
     flex-wrap: wrap !important;
+
     .partner {
         margin-bottom: 20px;
         width: 20%;
         flex-basis: auto;
         flex-grow: 0;
+
         img {
             width: 100%;
+            height: 96px;
             border: #eee solid 1px;
         }
     }
@@ -438,20 +509,24 @@
         background: url("./../images/footer_top_bg.png") no-repeat center;
         background-size: cover;
         padding: 20px 0 30px;
+
         .container {
             .contact {
                 line-height: 1;
                 color: #fff;
+
                 .mobile_number {
                     font-size: 30px;
                     color: @color-primary;
                     margin: 10px 0 20px;
                 }
+
                 .address {
                     margin-top: 12px;
                     line-height: 1.8;
                 }
             }
+
             .search {
                 .search_type {
                     li {
@@ -460,8 +535,10 @@
                         color: #fff;
                         height: 35px;
                         cursor: pointer;
+
                         &.active {
                             position: relative;
+
                             &::after {
                                 content: '';
                                 position: absolute;
@@ -478,8 +555,10 @@
                         }
                     }
                 }
+
                 .search_bar {
                     display: flex;
+
                     .search_bar_input {
                         flex: 1;
                         height: 46px;
@@ -489,6 +568,7 @@
                         outline: none;
                         padding: 0 10px;
                     }
+
                     .search_bar_button {
                         border-radius: 0 @border-radius @border-radius 0;
                         color: #fff;
@@ -502,8 +582,10 @@
                     }
                 }
             }
+
             .sns {
                 margin-top: 10px;
+
                 a {
                     display: inline-block;
                     margin-right: 5px;
@@ -515,8 +597,10 @@
                     border-radius: @border-radius-sm;
                 }
             }
+
             .qrcode {
                 display: flex;
+
                 img {
                     width: 100px;
                     height: 100px;
@@ -525,6 +609,7 @@
             }
         }
     }
+
     .footer_bottom {
         background: @color-primary;
         text-align: center;
@@ -545,25 +630,31 @@
     border-radius: @border-radius;
     overflow: hidden;
     margin-top: 24px;
+
     .menu {
         line-height: 52px;
+
         li {
             position: relative;
+
             a {
                 display: block;
                 padding: 0 0 0 24px;
             }
+
             &:not(.active):hover {
                 a {
                     background: @color-primary;
                     color: #fff;
                 }
             }
+
             &.active {
                 a {
                     font-weight: 700;
                     color: @color-primary;
                 }
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -581,14 +672,17 @@
     background: #fff;
     border-radius: @border-radius;
     margin-top: 24px;
+
     .avatar {
         width: 144px;
         text-align: center;
+
         img {
             width: 100%;
             margin-bottom: 20px;
         }
     }
+
     .user_section_title {
         font-size: 16px;
         height: 50px;
@@ -603,14 +697,17 @@
     display: flex;
     align-items: center;
     padding: 15px 0;
+
     .breadcrumb {
         background: 0;
         margin-bottom: 0;
         padding: 0;
         flex: 1;
     }
+
     .search_bar {
         display: flex;
+
         .search_input {
             height: 38px;
             line-height: 38px;
@@ -620,6 +717,7 @@
             min-width: 230px;
             padding: 0 8px;
         }
+
         .search_button {
             height: 38px;
             background: @color-primary;
@@ -627,9 +725,11 @@
             border: 0;
             padding: 0 10px;
             border-radius: 0 @border-radius @border-radius 0;
+
             .iconfont {
                 font-size: 14px;
             }
+
             &.map_btn {
                 margin-left: 10px;
                 border-radius: @border-radius;
@@ -644,15 +744,18 @@
     border-radius: @border-radius;
     margin-bottom: 10px;
     padding: 5px 0;
+
     .filter {
         display: flex;
         padding: 8px 15px 0px;
         font-size: 13px;
         line-height: 25px;
+
         .left {
             width: 55px;
             font-weight: 700;
         }
+
         .right {
             a {
                 display: inline-block;
@@ -660,15 +763,18 @@
                 margin-right: 4px;
                 margin-bottom: 8px;
                 float: left;
+
                 &.active {
                     background: @color-primary;
                     border-radius: @border-radius;
                     color: #fff;
                 }
             }
+
             .search_bar {
                 float: left;
                 margin-left: 50px;
+
                 input {
                     height: 25px;
                     line-height: 25px;
@@ -678,6 +784,7 @@
                     border-radius: @border-radius 0 0 @border-radius;
                     padding: 0 0 0 10px;
                 }
+
                 button {
                     height: 25px;
                     line-height: 25px;
@@ -688,6 +795,7 @@
                     padding: 0 10px;
                     float: left;
                     cursor: pointer;
+
                     i.iconfont {
                         font-size: 12px;
                     }
@@ -710,23 +818,28 @@
     display: flex;
     flex-direction: column;
     transition: all .3s ease;
+
     &.open {
         left: 64px;
     }
+
     .filter_group {
         padding: 8px 0 15px;
         flex: 1;
         overflow: hidden;
         overflow-y: auto;
+
         .filter {
             margin: 0;
             padding: 0 15px;
+
             dt {
                 font-size: 16px;
                 font-weight: 400;
                 padding: 2px 0 10px;
                 text-align: left;
             }
+
             dd {
                 a {
                     display: inline-block;
@@ -738,6 +851,7 @@
                     float: left;
                     background: @color-bg;
                     font-size: 13px;
+
                     &.active {
                         background: @color-primary;
                         border-radius: @border-radius;
@@ -747,9 +861,11 @@
             }
         }
     }
+
     .btn_group {
         display: flex;
         box-shadow: 0 -2px 5px rgba(0, 0, 0, .05);
+
         .cancel_btn, .submit_btn {
             border: 0;
             height: 56px;
@@ -757,6 +873,7 @@
             background: @color-bg;
             font-size: 15px;
         }
+
         .submit_btn {
             background: @color-primary;
             color: #fff;
@@ -774,15 +891,18 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: @border-radius;
+
     .item {
         line-height: 1.8;
         padding: 0 15px;
         cursor: pointer;
+
         .iconfont {
             &::before {
                 vertical-align: -1px;
             }
         }
+
         &.item_shaixuan {
             display: none;
         }
@@ -792,14 +912,17 @@
 .house_detail_title {
     background: #f5f5f6;
     height: 120px;
+
     .container {
         height: 100%;
         display: flex;
         align-items: center;
+
         .title {
             font-size: 24px;
             flex: 1;
         }
+
         .btn_group {
             .attention_btn, .remind_btn {
                 line-height: 42px;
@@ -807,6 +930,7 @@
                 border-radius: @border-radius;
                 box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
             }
+
             .attention_btn {
                 margin-right: 10px;
             }
@@ -817,20 +941,27 @@
 /*房源信息*/
 .overview {
     display: flex;
+
     .gallery {
         width: 60%;
+
         .preview {
-            height: 480px;
+
             .swiper-container {
                 width: 100%;
                 height: 100%;
                 border-radius: @border-radius;
                 overflow: hidden;
+
                 .swiper-wrapper {
                     .swiper-slide {
-                        background-size: cover;
+                        img {
+                            width: 100%;
+                            max-height: 480px;
+                        }
                     }
                 }
+
                 .swiper-pagination {
                     position: absolute;
                     z-index: 100;
@@ -845,9 +976,11 @@
                 }
             }
         }
+
         .thumb {
             margin-top: 10px;
             display: flex;
+
             .swiper-button-prev,
             .swiper-button-next {
                 width: 30px;
@@ -862,19 +995,23 @@
                 position: initial;
                 margin: 0;
             }
+
             .swiper-container {
                 flex: 1;
                 margin: 0 5px;
+
                 .swiper-wrapper {
                     .swiper-slide {
                         width: 20%;
                         height: 82px;
                         opacity: .5;
                         padding: 0 4px;
+
                         img {
                             width: 100%;
                             height: 100%;
                         }
+
                         &.swiper-slide-thumb-active {
                             opacity: 1;
                         }
@@ -883,53 +1020,67 @@
             }
         }
     }
+
     .content {
         width: 40%;
         padding-left: 24px;
+
         .title {
             font-size: 24px;
         }
+
         .price {
             margin-bottom: 10px;
+
             .starting {
                 .red {
                     color: @color-primary;
+
                     .number {
                         font-size: 32px;
                     }
                 }
             }
+
             .market {
                 margin-left: 50px;
             }
         }
+
         .info {
             background: #f4f4f4;
             border-radius: @border-radius;
             display: flex;
             margin-bottom: 10px;
+
             .item {
                 flex: 1;
                 padding: 20px 10px;
+
                 .top {
                     font-size: 22px;
                     margin-bottom: 5px;
                 }
+
                 .bottom {
                     color: rgba(0, 0, 0, .7)
                 }
             }
         }
+
         .attr {
             line-height: 32px;
             color: rgba(0, 0, 0, .7);
             margin-bottom: 10px;
+
             .count_down {
                 font-size: 18px;
             }
         }
+
         .button_group {
             margin-bottom: 24px;
+
             .btn {
                 height: 44px;
                 border-radius: @border-radius;
@@ -940,6 +1091,7 @@
                 padding-right: 20px;
                 margin-right: 10px;
             }
+
             .attention_btn, .remind_btn {
                 display: none;
             }
@@ -959,29 +1111,35 @@
 .house_content {
     display: flex;
     flex-wrap: wrap;
+
     .left {
         width: 60%;
         order: 1;
+
         .house_photo {
             img {
                 width: 100%;
                 margin-bottom: 10px;
             }
         }
+
         .house_estate_intro {
             img {
                 width: 100%;
             }
+
             .title {
                 font-size: 24px;
                 margin-bottom: 5px;
             }
+
             ul {
                 line-height: 2.2;
                 color: rgba(0, 0, 0, .8);
             }
         }
     }
+
     .right {
         width: 40%;
         order: 2;
@@ -993,48 +1151,59 @@
 .broker_group {
     background: #fff;
     z-index: 1000;
+
     .broker {
         display: flex;
         padding: 15px 0;
         border-top: @border-color solid 1px;
         border-bottom: @border-color solid 1px;
         align-items: center;
+
         + .broker {
             border-top: 0;
         }
+
         .picture {
             width: 81px;
             height: 108px;
+
             img {
                 width: 100%;
                 height: 100%;
             }
         }
+
         .content {
             padding: 0 15px;
             flex: 1;
             align-self: flex-start;
+
             .name {
                 font-size: 18px;
                 font-weight: 700;
                 margin-bottom: 5px;
+
                 .tag {
                     font-weight: 400;
                     font-size: 14px;
                     margin-left: 5px;
                 }
             }
+
             .duty {
                 margin-bottom: 15px;
             }
+
             .mobile {
                 font-size: 24px;
                 color: @color-primary;
             }
         }
+
         .qrcode {
             width: 98px;
             height: 98px;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -1046,19 +1215,25 @@
 /*文章列表*/
 .news_list {
     margin-bottom: 40px;
+
     .news {
         display: flex;
         margin-bottom: 20px;
+
         .thumb {
             display: block;
             width: 180px;
+
             img {
                 width: 100%;
+                height: 110px;
             }
         }
+
         .content {
             flex: 1;
             padding-left: @spacing * 2;
+
             .title {
                 font-size: 18px;
                 color: #000;
@@ -1069,11 +1244,13 @@
                 -webkit-line-clamp: 1;
                 margin: 3px 0 5px;
             }
+
             .date {
                 font-size: 12px;
                 color: rgba(0, 0, 0, .5);
                 margin-bottom: 8px;
             }
+
             .desc {
                 color: rgba(0, 0, 0, .8);
                 line-height: 1.8;
@@ -1091,18 +1268,22 @@
 .news_detail {
     max-width: 750px;
     margin: 0 auto;
+
     .title {
         font-size: 26px;
         margin: 10px 0 5px;
     }
+
     .time {
         color: rgba(0, 0, 0, .7);
         margin-bottom: 15px;
     }
+
     .content {
         padding-bottom: 50px;
         line-height: 1.8;
         font-size: 16px;
+
         img {
             max-width: 100%;
         }
@@ -1120,13 +1301,16 @@
     display: flex;
     flex-direction: column;
     padding-top: 40px;
+
     .login_header {
         padding: 32px 0 0;
         text-align: center;
+
         .title {
             display: flex;
             align-items: center;
             justify-content: center;
+
             .icon {
                 width: 180px;
                 height: 40px;
@@ -1135,33 +1319,40 @@
                 overflow: hidden;
             }
         }
+
         .desc {
             color: rgba(0, 0, 0, .45);
             margin-top: 12px;
             margin-bottom: 40px;
         }
     }
+
     .login_form {
         width: 368px;
         border-radius: 8px;
         margin: 0 auto;
         flex: 1 1;
+
         .form-control {
             height: 40px;
             padding-top: 10px;
             padding-bottom: 10px;
         }
+
         .btn {
             height: 40px;
             margin-top: 40px;
         }
+
         .link_group {
             text-align: center;
+
             .link {
                 margin-top: 20px;
             }
         }
     }
+
     .login_footer {
         padding: 0 16px;
         margin: 48px 0 24px;
@@ -1174,34 +1365,46 @@
 .remind_group {
     .house {
         display: flex;
+
         .thumb {
             width: 180px;
             margin-bottom: 0;
+
+            .cover {
+                height: 120px;
+            }
         }
+
         .content {
             padding-left: 15px;
             display: flex;
             flex: 1;
             align-self: center;
+
             .attr {
                 margin-bottom: 5px;
+
                 .price {
                     big {
                         font-size: 14px;
                     }
                 }
             }
+
             .section {
                 flex: 1;
             }
+
             .btn_group {
                 align-self: center;
                 padding-left: 15px;
+
                 .btn {
                     background: @color-bg;
                 }
             }
         }
+
         .state {
             left: 0;
             top: 10px;
