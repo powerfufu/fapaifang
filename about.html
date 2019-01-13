@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <title>法拍房</title>
 </head>
@@ -70,18 +71,95 @@
     </div>
 </nav>
 
-<div class="container">
-    <!--面包屑导航-->
-    <div class="breadcrumb_wrapper breadcrumb_wrapper_detail">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">首页</a></li>
-            <li class="breadcrumb-item active">关于我们</li>
-        </ol>
+<!--banner-->
+<div class="about_banner_wrapper">
+    <div class="about_banner">
+        <h2>关于我们</h2>
+        <p>about us</p>
     </div>
-    
-    <!--关于我们-->
-
 </div>
+
+<!--公司介绍-->
+<div class="container company_wrapper">
+    <h2 class="about_headline">公司介绍</h2>
+    <div class="content">
+        <p>
+            法拍网依托互联网优势搭建起法拍置业，线上拍卖服务等业务，开创司法拍卖资产公开拍卖投资领域的先河，法拍网线上内容本着全面、及时、精准、为基础，已成为业内知名的拍卖业务服务机构。</p>
+        <p>公司主要从事房产司法拍卖、国有资产转让、不良资产的收购业务，经过数年的努力，已成为行业的领头羊和标杆！</p>
+    </div>
+</div>
+
+<!--我们的团队-->
+<div class="team_wrapper">
+    <div class="container">
+        <div class="about_headline">我们的团队</div>
+        <div class="swiper-container team_swiper_container" id="teamSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/team_1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/team_1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/team_1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/team_1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/team_1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--合作伙伴-->
+<div class="container partner_wrapper">
+    <div class="about_headline">
+        合作伙伴
+    </div>
+    <div class="row partner_group">
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+        <div class="col partner">
+            <img src="./images/img_4.png">
+        </div>
+    </div>
+</div>
+
 
 <!--footer-->
 <div class="footer">
@@ -132,29 +210,42 @@
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
 <script>
-    (function() {
-        /*
-        * 搜索类型切换
-        * */
-        $('[data-name="searchType"] li').on('click', function() {
-            $(this).addClass('active').siblings().removeClass('active')
-        })
+    (function () {
+        /**
+         * 搜索类型切换
+         */
+        $('[data-name="searchType"] li').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
 
-        /*
-        * 切换 mobile 筛选条件显示隐藏
-        * 给 #filterBox 添加 open 即可显示，反之隐藏
-        * */
-        $('[data-toggle="filter"]').on('click', function(e) {
-            var $filterBox = $('#filterBox')
-            if ($filterBox.hasClass('open')) {
-                $filterBox.removeClass('open')
-            } else {
-                $filterBox.addClass('open')
+        /**
+         * 我们的团队
+         */
+        var swiper = new Swiper('#teamSwiper', {
+            loop: true,
+            autoplay: true,
+            centeredSlides: true,
+            slidesPerView: 2,
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true
+            },
+            breakpoints: {
+                991: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                }
             }
-            e.stopPropagation()
-        })
-    })()
+        });
+
+
+    })();
 </script>
 </body>
 </html>
