@@ -16,7 +16,7 @@
             padding-right: 13px;
             white-space: nowrap
         }
-        
+
         .iw_poi_content {
             font: 12px arial, sans-serif;
             overflow: visible;
@@ -24,7 +24,7 @@
             white-space: -moz-pre-wrap;
             word-wrap: break-word
         }
-        
+
         .divAbc {
             position: absolute;
             width: 80px;
@@ -36,7 +36,7 @@
             text-align: center;
             line-height: 80px;
         }
-    
+
     </style>
 </head>
 <body>
@@ -99,72 +99,9 @@
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=4SABZ-3OEWX-3TP4N-ZLSPB-OHY2J-AHFQB"></script>
+<script src="./js/map.js"></script>
 <script type="text/javascript">
-    //声明类,opts为类属性，初始化时传入（非必须，看实际需求）
-    var myOverlay = function (opts) {
-        qq.maps.Overlay.call(this, opts);
-    };
-    //继承Overlay基类
-    myOverlay.prototype = new qq.maps.Overlay();
-    //实现构造方法
-    myOverlay.prototype.construct = function () {
-        
-        //创建了覆盖物的容器，这里我用了一个div，并且设置了样式
-        this.dom = document.createElement('div');
-        this.dom.className = 'bubble';
-        
-        //将初始化的html填入到了窗口里，这根据您自己的需要决定是否加这属性
-        this.dom.innerHTML = this.get('inithtml');
-        
-        //将dom添加到覆盖物层
-        this.getPanes().overlayLayer.appendChild(this.dom);
-    };
-    
-    //自定义的方法，用于设置myOverlay的html
-    myOverlay.prototype.html = function (html) {
-        this.dom.innerHTML = html;
-    };
-    
-    //实现绘制覆盖物的方法（覆盖物的位置在此控制）
-    myOverlay.prototype.draw = function () {
-        //获取地理经纬度坐标
-        var position = this.get('position');
-        if (position) {
-            var pixel = this.getProjection().fromLatLngToDivPixel(position);
-            this.dom.style.left = pixel.getX() + 'px';
-            this.dom.style.top = pixel.getY() + 'px';
-        }
-    };
-    
-    //实现析构方法（类生命周期结束时会自动调用，用于释放资源等）
-    myOverlay.prototype.destroy = function () {
-        //移除dom
-        this.dom.parentNode.removeChild(this.dom);
-    };
-    
-    //以上自定义Overlay代码结束 =================================================
-    var label;
-    
-    function init() {
-        //初始化地图
-        var center = new qq.maps.LatLng(39.982163, 116.306070);
-        var map = new qq.maps.Map(document.getElementById("map"), {
-            center: center,
-            zoom: 14
-        });
-        
-        var html = '<p class="area">朝阳</p><p class="number"><span>1245</span>套</p>';
-        //创自定义覆盖物 myOverlay，并设置初始的html
-        label = new myOverlay({
-            map: map,
-            position: center,
-            inithtml: html
-        });
-    }
-    
-    window.onload = function () {
-        init();
-    };
+    var txmap = new TXMap();
 </script>
 </body>
 </html>
