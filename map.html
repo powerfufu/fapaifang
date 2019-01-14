@@ -16,7 +16,7 @@
             padding-right: 13px;
             white-space: nowrap
         }
-
+        
         .iw_poi_content {
             font: 12px arial, sans-serif;
             overflow: visible;
@@ -24,7 +24,7 @@
             white-space: -moz-pre-wrap;
             word-wrap: break-word
         }
-
+        
         .divAbc {
             position: absolute;
             width: 80px;
@@ -36,7 +36,7 @@
             text-align: center;
             line-height: 80px;
         }
-
+    
     </style>
 </head>
 <body>
@@ -94,223 +94,77 @@
             </div>
         </nav>
     </div>
-    <div class="map_content" id="dituContent">asfasdf</div>
+    <div class="map_content" id="map"></div>
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AHcSkCvUFIVUN3dtH5VXGNlicVmExAXB"></script>
+<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=4SABZ-3OEWX-3TP4N-ZLSPB-OHY2J-AHFQB"></script>
 <script type="text/javascript">
-
-    //创建地图函数：
-    function createMap() {
-        var map = new BMap.Map("dituContent");              //在百度地图容器中创建一个地图
-        var point = new BMap.Point(104.071216, 30.576279);  //定义一个中心点坐标
-        map.centerAndZoom(point, 11);                       //设定地图的中心点和坐标并将地图显示在地图容器中
-        map.setCurrentCity("成都");                          //设置地图显示的城市 此项是必须设置的
-        window.map = map;                                   //将map变量存储在全局
-    }
-
-    //地图事件设置函数：
-    function setMapEvent() {
-        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
-        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
-        map.enableKeyboard();//启用键盘上下左右键移动地图
-
-    }
-
-    //地图控件添加函数：
-    function addMapControl() {
-        //向地图中添加缩放控件
-        var ctrl_nav = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL});
-        map.addControl(ctrl_nav);
-        //向地图中添加缩略图控件
-        var ctrl_ove = new BMap.OverviewMapControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1});
-        map.addControl(ctrl_ove);
-        //向地图中添加比例尺控件
-        var ctrl_sca = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});
-        map.addControl(ctrl_sca);
-    }
-
-    function getBoundary(page) {
-        var bdary = new BMap.Boundary();
-        var name = page;
-        bdary.get(name, function (rs) {         //获取行政区域
-            //map.clearOverlays();              //清除地图覆盖物
-            var count = rs.boundaries.length;   //行政区域的点有多少个
-            for (var i = 0; i < count; i++) {
-                var ply = new BMap.Polygon(rs.boundaries[i], {
-                    strokeWeight: 3,
-                    strokeColor: "#CF141B",
-                    fillColor: "rgba(207,20,27,0.5)"
-                }); //建立多边形覆盖物
-                map.addOverlay(ply);  //添加覆盖物
-
-            }
+    //声明类,opts为类属性，初始化时传入（非必须，看实际需求）
+    var myOverlay = function (opts) {
+        qq.maps.Overlay.call(this, opts);
+    };
+    //继承Overlay基类
+    myOverlay.prototype = new qq.maps.Overlay();
+    //实现构造方法
+    myOverlay.prototype.construct = function () {
+        
+        //创建了覆盖物的容器，这里我用了一个div，并且设置了样式
+        this.dom = document.createElement('div');
+        this.dom.className = 'bubble';
+        
+        //将初始化的html填入到了窗口里，这根据您自己的需要决定是否加这属性
+        this.dom.innerHTML = this.get('inithtml');
+        
+        //将dom添加到覆盖物层
+        this.getPanes().overlayLayer.appendChild(this.dom);
+    };
+    
+    //自定义的方法，用于设置myOverlay的html
+    myOverlay.prototype.html = function (html) {
+        this.dom.innerHTML = html;
+    };
+    
+    //实现绘制覆盖物的方法（覆盖物的位置在此控制）
+    myOverlay.prototype.draw = function () {
+        //获取地理经纬度坐标
+        var position = this.get('position');
+        if (position) {
+            var pixel = this.getProjection().fromLatLngToDivPixel(position);
+            this.dom.style.left = pixel.getX() + 'px';
+            this.dom.style.top = pixel.getY() + 'px';
+        }
+    };
+    
+    //实现析构方法（类生命周期结束时会自动调用，用于释放资源等）
+    myOverlay.prototype.destroy = function () {
+        //移除dom
+        this.dom.parentNode.removeChild(this.dom);
+    };
+    
+    //以上自定义Overlay代码结束 =================================================
+    var label;
+    
+    function init() {
+        //初始化地图
+        var center = new qq.maps.LatLng(39.982163, 116.306070);
+        var map = new qq.maps.Map(document.getElementById("map"), {
+            center: center,
+            zoom: 14
+        });
+        
+        var html = '<p class="area">朝阳</p><p class="number"><span>1245</span>套</p>';
+        //创自定义覆盖物 myOverlay，并设置初始的html
+        label = new myOverlay({
+            map: map,
+            position: center,
+            inithtml: html
         });
     }
-
-    //标注点数组  ,
-    var markerArr = [
-        {
-            title: "成化区",
-            content: "我的备注",
-            point: "104.121809|30.674728",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "武侯区",
-            content: "我的备注",
-            point: "104.020623|30.65783",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "龙泉驿",
-            content: "我的备注",
-            point: "104.261513|30.569314",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "金牛区",
-            content: "我的备注",
-            point: "104.060293|30.69858",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "温江区",
-            content: "我的备注",
-            point: "103.822174|30.718227",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "双流区",
-            content: "我的备注",
-            point: "103.925171|30.563443",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "新津县",
-            content: "我的备注",
-            point: "103.819427|30.424993",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "郫都区",
-            content: "我的备注",
-            point: "103.901825|30.810270",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-        , {
-            title: "新都区",
-            content: "我的备注",
-            point: "104.173737|30.838573",
-            isOpen: 0,
-            icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
-        }
-    ];
-
-    //创建marker
-    function addMarker() {
-        // 复杂的自定义覆盖物
-        function ComplexCustomOverlay(point, text, mouseoverText) {
-            this._point = point;
-            this._text = text;
-            this._overText = mouseoverText;
-        }
-
-        ComplexCustomOverlay.prototype = new BMap.Overlay();
-        ComplexCustomOverlay.prototype.initialize = function (map) {
-            this._map = map;
-            //添加div
-            var div = this._div = document.createElement("div");
-            div.className = 'divAbc';
-            //添加span
-            var span = this._span = document.createElement("span");
-            div.appendChild(span);
-
-            span.appendChild(document.createTextNode(this._text));//添加内容
-            var that = this;
-
-            var arrow = this._arrow = document.createElement("div");
-            arrow.style.top = "39px";
-            arrow.style.left = "10px";
-            div.className = 'divAbc';
-            div.appendChild(arrow);
-            map.getPanes().labelPane.appendChild(div);
-            return div;
-        };
-
-        //创建InfoWindow
-        function createInfoWindow(i) {
-            var json = markerArr[i];
-            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><p style=" +
-                'padding - top: 8 px' +
-                "><hr></p><div class='iw_poi_content'>" + json.content + "</div>");
-            return iw;
-        }
-
-        ComplexCustomOverlay.prototype.draw = function () {
-            var map = this._map;
-            var pixel = map.pointToOverlayPixel(this._point);
-            this._div.style.left = pixel.x - parseInt(this._arrow.style.left) + "px";
-            this._div.style.top = pixel.y - 30 + "px";
-        };
-        ComplexCustomOverlay.prototype.addEventListener = function (event, fun) {
-            this._div['on' + event] = fun;
-        };
-        for (var i = 0; i < markerArr.length; i++) {
-            var json = markerArr[i];
-            var txt = markerArr[i].title;
-            var iw = createInfoWindow(i);
-            var pintx = markerArr[i].point.split('|')[0];
-            var pinty = markerArr[i].point.split('|')[1];
-            var myCompOverlay = new ComplexCustomOverlay(new BMap.Point(pintx, pinty), txt, txt); //这步是将覆盖物存到变量，以便下面使用。
-            map.addOverlay(myCompOverlay);
-            //myCompOverlay.addEventListener("click",);
-            (function () {
-                var index = i;
-                var p0 = json.point.split("|")[0];
-                var p1 = json.point.split("|")[1];
-                var point = new BMap.Point(p0, p1);
-                var _iw = createInfoWindow(i);
-                var marker = myCompOverlay; //当初存的覆盖物变量，这里派上用场了。
-                marker.addEventListener("click", function (e) {//覆盖物的点击事件
-                    //map.openInfoWindow(_iw, point);
-                    map.clearOverlays();        //清除地图覆盖物
-                    var p = point;
-                    var gc = new BMap.Geocoder();
-                    map.setCenter(new BMap.Point(p.lng, p.lat)); //更改中心坐标点
-                    map.centerAndZoom(point, 12);//设定地图的中心点和坐标并将地图显示在地图容器中*/
-                    addMarker();
-                    gc.getLocation(p, function (rs) {
-                        console.log(rs);
-                        getBoundary(rs.addressComponents.district);
-                    });
-                });
-                if (!!json.isOpen) {
-                    this.openInfoWindow(_iw);
-                }
-            })();
-        }
-    }
-
-    function initMap() {
-        createMap();//创建地图
-        setMapEvent();//设置地图事件
-        addMapControl();//向地图添加控件
-        addMarker();//向地图中添加marker
-        getBoundary('成都市');//地址 、省 、市、区、县
-    }
-
-    initMap();//创建和初始化地图
+    
+    window.onload = function () {
+        init();
+    };
 </script>
 </body>
 </html>
