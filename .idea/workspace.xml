@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a87e8f5f-5477-4fc1-b6ff-fddbc36a798e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/demo_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/demo_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iconfont/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iconfont/iconfont.woff2" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,19 +26,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/map.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="138" column="35" lean-forward="true" selection-start-line="138" selection-start-column="35" selection-end-line="138" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="1562" column="28" selection-start-line="1562" selection-start-column="28" selection-end-line="1562" selection-end-column="28" />
+            <state relative-caret-position="396">
+              <caret line="528" column="70" selection-start-line="528" selection-start-column="70" selection-end-line="528" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -136,12 +134,12 @@
         <option value="$PROJECT_DIR$/news_detail.html" />
         <option value="$PROJECT_DIR$/less/media.less" />
         <option value="$PROJECT_DIR$/about.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/less/bootstrap.less" />
         <option value="$PROJECT_DIR$/house_detail.html" />
         <option value="$USER_HOME$/Desktop/flex.html" />
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/map.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -170,6 +168,17 @@
               <item name="fapaifang" type="b2602c69:ProjectViewProjectNode" />
               <item name="fapaifang" type="462c0819:PsiDirectoryNode" />
               <item name="less" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fapaifang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fapaifang" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fapaifang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fapaifang" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="iconfont" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,12 +251,14 @@
       <workItem from="1546866685541" duration="21000" />
       <workItem from="1547125689363" duration="433000" />
       <workItem from="1547281985727" duration="502000" />
-      <workItem from="1547452940776" duration="7835000" />
+      <workItem from="1547452940776" duration="8067000" />
+      <workItem from="1547634546034" duration="168000" />
+      <workItem from="1547692764583" duration="798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127862000" />
+    <option name="totallyTimeSpent" value="129060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -265,7 +276,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.26681128" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.26681128" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -624,26 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="540" column="10" lean-forward="true" selection-start-line="540" selection-start-column="10" selection-end-line="540" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="349" column="46" selection-start-line="349" selection-start-column="41" selection-end-line="349" selection-end-column="46" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#14428#14435#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -658,10 +649,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/flex.html">
+    <entry file="file://$USER_HOME$/Desktop/flex.html" />
+    <entry file="file://$PROJECT_DIR$/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="456">
+          <caret line="103" column="10" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
+          <folding>
+            <element signature="e#3172#3178#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -672,10 +667,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.html">
+    <entry file="file://$PROJECT_DIR$/house_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="138" column="35" lean-forward="true" selection-start-line="138" selection-start-column="35" selection-end-line="138" selection-end-column="35" />
+        <state relative-caret-position="456">
+          <caret line="427" column="9" lean-forward="true" selection-start-line="427" selection-start-column="9" selection-end-line="427" selection-end-column="9" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#14428#14435#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="528" column="70" selection-start-line="528" selection-start-column="70" selection-end-line="528" selection-end-column="70" />
         </state>
       </provider>
     </entry>
