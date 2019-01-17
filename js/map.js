@@ -1,59 +1,25 @@
-function TXMap(options) {
-    var defaults = {
-        ele: 'map'
-    };
-    this.opts = Object.assign({}, defaults, options);
-    this.init(39.903740, 116.397827);
-}
-
-TXMap.prototype = {
-    /**
-     * 初始化地图
-     * @param lat   纬度
-     * @param lng   经度
-     */
-    init: function (lat, lng) {
-        var self = this;
-        var center = new qq.maps.LatLng(lat, lng);
-        self.map = new qq.maps.Map(document.getElementById(self.opts.ele), {
-            center: center,
-            zoom: 14
-        });
-        var customeOverlay = new CustomOverlay({
-            lat: 39.903740,
-            lng: 116.397827
-        });
-        customeOverlay.setMap(self.map);
-    }
+//声明类,opts为类属性，初始化时传入（非必须，看实际需求）
+function CustomOverlay(opts) {
+    qq.maps.Overlay.call(this, opts);
 };
-
-function CustomOverlay(options) {
-    var defaults = {
-        lat: '',
-        lng: ''
-    };
-    this.opts = Object.assign({}, defaults, options);
-    // 调用地图 api 计算出覆盖物的位置
-    this.position = new window.qq.maps.LatLng(this.opts.lat, this.opts.lng);
-}
-
+//继承Overlay基类
 CustomOverlay.prototype = new qq.maps.Overlay();
-
+//实现构造方法
 CustomOverlay.prototype.construct = function () {
-    // 创建容器
+
+    //创建了覆盖物的容器，这里我用了一个div，并且设置了样式
     this.dom = document.createElement('div');
-    this.dom.className = 'bubble';
+    this.dom.style.cssText =
+        'background:#0f0;color:white;position:absolute;' +
+        'text-align:center;width:100px;height:30px';
 
-    // 内容
-    this.dom.innerHTML = '<p class="area">朝阳</p><p class="number"><span>1245</span>套</p>';
-    // 添加 dom
-    this.getPanes().overlayMouseTarget.appendChild(this.dom);
-    // 设置自定义事件
-    this.dom.onclick = function () {
-        console.log('放大');
-    };
+    //将初始化的html填入到了窗口里，这根据您自己的需要决定是否加这属性
+    this.dom.innerHTML = this.get('inithtml');
+
+    //将dom添加到覆盖物层
+    this.getPanes().overlayLayer.appendChild(this.dom);
 };
-
+//实现绘制覆盖物的方法（覆盖物的位置在此控制）
 CustomOverlay.prototype.draw = function () {
     //获取地理经纬度坐标
     var position = this.get('position');
@@ -63,9 +29,32 @@ CustomOverlay.prototype.draw = function () {
         this.dom.style.top = pixel.getY() + 'px';
     }
 };
-
+//实现析构方法（类生命周期结束时会自动调用，用于释放资源等）
 CustomOverlay.prototype.destroy = function () {
     //移除dom
     this.dom.parentNode.removeChild(this.dom);
 };
 
+
+function TXMap() {
+    this.init();
+}
+
+TXMap.prototype = {
+    init: function () {
+        var box = document.getElementsByTagName('body')[0];
+        var center = new qq.maps.LatLng(39.916527, 116.397128);
+        var map = new qq.maps.Map(box, {
+            center: center,
+            zoom: 8
+        });
+
+        new CustomOverlay({
+            map: map,
+            position: center,
+            inithtml: 'balabalaxiaomoxian'
+        });
+    }
+};
+
+var txmap = new TXMap();
