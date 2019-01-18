@@ -1498,26 +1498,39 @@
 
 /*六项保证*/
 .ensure_wrapper {
-    background: #35393E;
-    padding: 80px 0;
+    background-image: linear-gradient(to right, #b58f0b 0%, #c19b27 26%, #dbb943 100%);
+    padding: 60px 0 30px;
 
     .about_headline {
         color: #fff;
     }
 
     .item {
-        background: #A7830A;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         border-radius: @border-radius;
-        display: flex;
-        align-items: center;
+        text-align: center;
+
+        &:hover {
+            .icon {
+                transform: translateY(-10px);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            }
+        }
 
         .icon {
-            padding: 15px 15px 15px 30px;
+            background: #fff;
+            display: flex;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+            transition: all .3s ease;
         }
 
         .content {
-            padding: 0 0 0 15px;
             color: #fff;
 
             .title {
@@ -1631,7 +1644,7 @@
 
                         .price {
                             font-size: 18px;
-                            color: #CF141B;
+                            color: #cf141b;
                         }
                     }
                 }
