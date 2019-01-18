@@ -7,37 +7,6 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>法拍房</title>
-    <style>
-        .iw_poi_title {
-            color: #c52;
-            font-size: 14px;
-            font-weight: bold;
-            overflow: hidden;
-            padding-right: 13px;
-            white-space: nowrap
-        }
-
-        .iw_poi_content {
-            font: 12px arial, sans-serif;
-            overflow: visible;
-            padding-top: 4px;
-            white-space: -moz-pre-wrap;
-            word-wrap: break-word
-        }
-
-        .divAbc {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border-radius: 40px;
-            background-color: #cf141b;
-            color: #fff;
-            font-size: 12px;
-            text-align: center;
-            line-height: 80px;
-        }
-
-    </style>
 </head>
 <body>
 
@@ -94,7 +63,30 @@
             </div>
         </nav>
     </div>
-    <div class="map_content" id="map"></div>
+    <div class="map_select">
+        <div class="form-inline">
+            <select name="" class="form-control"></select>
+            <select name="" class="form-control"></select>
+            <select name="" class="form-control"></select>
+        </div>
+    </div>
+    <div class="map_content">
+        <div class="map_house_list">
+            <div class="map_house_group">
+                <div class="map_house">
+                    <a href="##" class="thumb"><img src="./images/img_1.png" alt=""></a>
+                    <div class="content">
+                        <a href="##" class="title">名称</a>
+                        <div class="attr">两室一厅</div>
+                        <div class="price">2653.1万</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map" id="map">
+        
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
@@ -102,6 +94,58 @@
 <script src="./js/map.js"></script>
 <script type="text/javascript">
     var txmap = new TXMap();
+    
+    $.ajax({
+        method: 'post',
+        url: 'http://192.168.1.106:8010/api/LawStudio/GetRegionEstate',
+        data: {},
+        dataType: 'json',
+        success: function (res) {
+            var json = JSON.parse(res.data);
+            draw(json);
+        }
+    });
+    
+    function draw(res) {
+        txmap.drawOverlay({
+            containerId: 'map',
+            data: res,
+            callback: dile
+            //onclick: labelClick
+        });
+    }
+    
+    function labelClick(row) {
+        console.log(row);
+    }
+    
+    function dile(bounds, zoom) {
+        if (zoom < 13) { // 从第二层缩小回到第一层
+            $.ajax({
+                method: 'post',
+                url: 'http://192.168.1.106:8010/api/LawStudio/GetRegionEstate',
+                data: {},
+                dataType: 'json',
+                success: function (res) {
+                    var json = JSON.parse(res.data);
+                    draw(json);
+                }
+            });
+        } else if (zoom >= 13) { // 从第一层方法到第二层
+            $.ajax({
+                method: 'post',
+                url: 'http://192.168.1.106:8010/api/LawStudio/GetHouseLAndL',
+                data: {},
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res)
+                    var json = JSON.parse(res.data);
+                    draw(json);
+                }
+            });
+        }
+    }
+
 </script>
 </body>
 </html>
